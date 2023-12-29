@@ -1,0 +1,715 @@
+ /* --------------------- 业务类变量 --------------------- */
+/**
+ * 文件说明：针对项目的个性化定制样式，项目中通用全局样式 
+ */
+[data-theme] {
+  /* Margin
+  ---------------------------------------------------- */
+  --idss-margin-mini: 8px;
+  --idss-margin-small: 12px;
+  --idss-margin-medium: 16px;
+  --idss-margin-large: 24px;
+  /* Padding
+  ---------------------------------------------------- */
+  --idss-padding-mini: 8px;
+  --idss-padding-small: 12px;
+  --idss-padding-medium: 16px;
+  --idss-padding-large: 24px;
+}
+
+/* Margin
+---------------------------------------------------------- */
+.idss-margin--mi {
+  margin: var(--idss-margin-mini);
+}
+.idss-margin--s {
+  margin: var(--idss-margin-small);
+}
+.idss-margin--m {
+  margin: var(--idss-margin-medium);
+}
+.idss-margin--l {
+  margin: var(--idss-margin-large);
+}
+
+.idss-margin--t-mi {
+  margin-top: var(--idss-margin-mini);
+}
+.idss-margin--r-mi {
+  margin-right: var(--idss-margin-mini);
+}
+.idss-margin--b-mi {
+  margin-bottom: var(--idss-margin-mini);
+}
+.idss-margin--l-mi {
+  margin-left: var(--idss-margin-mini);
+}
+
+.idss-margin--t-s {
+  margin-top: var(--idss-margin-small);
+}
+.idss-margin--r-s {
+  margin-right: var(--idss-margin-small);
+}
+.idss-margin--b-s {
+  margin-bottom: var(--idss-margin-small);
+}
+.idss-margin--l-s {
+  margin-left: var(--idss-margin-small);
+}
+
+.idss-margin--t-m {
+  margin-top: var(--idss-margin-medium);
+}
+.idss-margin--r-m {
+  margin-right: var(--idss-margin-medium);
+}
+.idss-margin--b-m {
+  margin-bottom: var(--idss-margin-medium);
+}
+.idss-margin--l-m {
+  margin-left: var(--idss-margin-medium);
+}
+
+.idss-margin--t-l {
+  margin-top: var(--idss-margin-large);
+}
+.idss-margin--r-l {
+  margin-right: var(--idss-margin-large);
+}
+.idss-margin--b-l {
+  margin-bottom: var(--idss-margin-large);
+}
+.idss-margin--l-l {
+  margin-left: var(--idss-margin-large);
+}
+
+
+/* Padding
+---------------------------------------------------------- */
+.idss-padding--mi {
+  padding: var(--idss-padding-mini);
+}
+.idss-padding--s {
+  padding: var(--idss-padding-small);
+}
+.idss-padding--m {
+  padding: var(--idss-padding-medium);
+}
+.idss-padding--l {
+  padding: var(--idss-padding-large);
+}
+
+.idss-padding--t-mi {
+  padding-top: var(--idss-padding-mini);
+}
+.idss-padding--r-mi {
+  padding-right: var(--idss-padding-mini);
+}
+.idss-padding--b-mi {
+  padding-bottom: var(--idss-padding-mini);
+}
+.idss-padding--l-mi {
+  padding-left: var(--idss-padding-mini);
+}
+
+.idss-padding--t-s {
+  padding-top: var(--idss-padding-small);
+}
+.idss-padding--r-s {
+  padding-right: var(--idss-padding-small);
+}
+.idss-padding--b-s {
+  padding-bottom: var(--idss-padding-small);
+}
+.idss-padding--l-s {
+  padding-left: var(--idss-padding-small);
+}
+
+.idss-padding--t-m {
+  padding-top: var(--idss-padding-medium);
+}
+.idss-padding--r-m {
+  padding-right: var(--idss-padding-medium);
+}
+.idss-padding--b-m {
+  padding-bottom: var(--idss-padding-medium);
+}
+.idss-padding--l-m {
+  padding-left: var(--idss-padding-medium);
+}
+
+.idss-padding--t-l {
+  padding-top: var(--idss-padding-large);
+}
+.idss-padding--r-l {
+  padding-right: var(--idss-padding-large);
+}
+.idss-padding--b-l {
+  padding-bottom: var(--idss-padding-large);
+}
+.idss-padding--l-l {
+  padding-left: var(--idss-padding-large);
+}
+
+/* 文本超出样式
+---------------------------------------------------------- */
+.idss-text-overflow {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+/* 表单label两行超出样式，还需要修改其行高(element.css)，默认是32px,两行的话行高为16px
+---------------------------------------------------------- */
+.idss-form-label-line-2 {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+
+/* 居中对齐【绝对定位】
+------------------------------------------------------------ */
+.idss-center--absolute {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* Title @fixme 待优化
+------------------------------------------------------------ */
+.idss-font--title {
+  display: inline-block;
+  font-size: var(--font-size-4);
+  font-weight: bold;
+  line-height: 1;
+}
+.idss-font--sub {
+  font-size: var(--font-size-default);
+  line-height: 1;
+}
+
+/* 文本对齐
+------------------------------------------------------------ */
+.idss-txt--right {
+  text-align: right;
+}
+.idss-txt--left {
+  text-align: left;
+}
+.idss-txt--center {
+  text-align: center;
+}
+
+/* 链接文本
+-------------------------------------------------------------- */
+.idss-txt-link {
+  color: var(--button-text-color);
+  cursor: pointer;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+/* idss-txt-link 的鼠标 hover 效果 */
+.idss-txt-link-hover {
+  &:hover {
+    cursor: pointer;
+    color: var(--button-text-color);
+    text-decoration: underline;
+    & svg {
+      fill: var(--button-text-color);
+    }
+  }
+}
+
+/* 筛选条件
+-------------------------------------------------------------- */
+.idss-title-filtrate {
+  font-weight: bolder;
+  font-size: var(--font-size-4);
+  color: var(--color-font-2);
+}
+
+/* 通过行高设置垂直居中
+-------------------------------------------------------------- */
+.idss-vertical-align {
+  display: inline-block; 
+  line-height: 1; 
+  vertical-align: middle;
+}
+
+/* 表格右侧设置setting按钮
+-------------------------------------------------------------- */
+.table-fixed-right-setting-btn{
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 9;
+}
+
+/* 表格暂无数据样式
+-------------------------------------------------------------- */
+.el-table__empty-block{
+  min-height: 186px;
+  .idss-empty{
+    width: 128px;
+    position: sticky;
+    left: calc((100% - 128px) / 2);
+  }
+}
+.idss-empty{
+  flex-direction: column;
+  color: var(--color-font-4);
+  line-height: 20px;
+}
+/* el-table 处理单元格数据为空时显示--
+---------------------------------------------------------- */
+.el-table .el-table__body-wrapper tr.el-table__row td.empty-cell {
+  .cell:after {
+    content: '--';
+    color: var(--color-font-sub);
+    font-size: var(--font-size-default);
+  }
+}
+/* el dropdown 下拉菜单样式
+-------------------------------------------------------------- */
+.el-dropdown-icon-btn{
+  margin-left: var(--idss-margin-small);
+  margin: 0 8px;
+  cursor: pointer;
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  line-height: 16px;
+}
+/* 滑块组件修改
+-------------------------------------------------------------- */
+.idss-static-frame {
+  .outside {
+    min-width: 500px;
+    box-shadow: -4px 0 16px var(--guan-gray-7-a40);
+    border: 1px solid var(--color-line-5);
+    .frame-header {
+      padding: 12px 20px!important;
+      border-bottom: 1px solid var(--color-line-3);
+    }
+    .frame-main {
+      scroll-behavior: smooth;
+      &-container {
+        /* 减去底部按钮占用高度，前提是底部内容未使用footer插槽 */
+        height: calc(100% - 73px);
+        overflow-y: auto;
+        scroll-behavior: smooth;
+      }
+    }
+  }
+}
+/* 滑块&&弹窗组件按钮固定在页面底部
+-------------------------------------------------------------- */
+.idss-position-fixed--bottom {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+/* 等级样式 危急 高 中 低 信息
+-------------------------------------------------------------- */
+.idss-severity-critical {
+  fill: var(--color-alarm-1) !important;
+}
+.idss-severity-high {
+  fill: var(--color-alarm-2) !important;
+}
+.idss-severity-medium {
+  fill: var(--color-alarm-3) !important;
+}
+.idss-severity-low {
+  fill: var(--color-alarm-4) !important;
+}
+.idss-severity-info {
+  fill: var(--color-alarm-5) !important;
+}
+
+/* 虚线样式
+-------------------------------------------------------------- */
+.idss-border-dashed-line {
+  border-bottom: 1px dashed var(--color-line-4);
+}
+ 
+/* 流程引擎工单状态 未处理:0 处理中:1 已处理:2
+-------------------------------------------------------------- */
+
+.idss-deal-status-0 {
+  fill: var(--orange-6) !important;
+}
+
+.idss-deal-status-1 {
+  fill: var(--cerulean-5) !important;
+}
+
+.idss-deal-status-2 {
+  fill: var(--green-6) !important;
+}
+
+/* idss-select-tree 在弹窗中使用时图标显示问题
+---------------------------------------------------------- */
+.idss-not-show-validateIcon {
+  i.el-input__validateIcon {
+    display: none;
+  }
+}
+/* idss-select-tree 处理树中input固定位置
+---------------------------------------------------------- */
+.custom-select .el-scrollbar .el-select-dropdown__wrap .el-select-dropdown__list{
+   .idss-inner-fixed-input{
+        position: absolute;
+        top: 0;
+        width: 100%;
+        z-index: 9;
+        background: #fff;
+        padding:10px 10px 4px;
+        text-align:right;
+        display: flex;
+        align-items: center;
+  }
+  .el-tree{
+    margin-top: 42px;
+      /* 自定义class解决el-tree单选时看不出disabled效果 */
+      .el-tree-node .custom-is-disabled{ 
+        cursor: not-allowed;
+        color: var(--color-font-disabled, #c5cad1);
+      }
+    }
+}
+/* 业务系统下拉树自定义class */
+.idss-business-select-tree {
+  .idss-inner-fixed-input{
+   > .el-checkbox {
+      margin-top: 4px;
+   }
+  }
+  .el-tree {
+    margin-top: 60px !important;
+  }
+}
+
+
+
+/* @fixme:idss-select-tree 处理dropdown超长时出现滚动条
+https://github.com/ElemeFE/element/issues/12418
+---------------------------------------------------------- */
+.custom-select {
+  max-width: 1px;
+}
+/* el-scrollbar 里面的el-tree出现横向滚动条
+---------------------------------------------------------- */
+.el-scrollbar_tree, .custom-select {
+  .el-scrollbar__wrap {
+    .el-scrollbar__view {
+      display: inline-block;
+      min-width: 100%;
+    }
+  }
+}
+/* input搜索框普通灰色
+-------------------------------------------------------------- */
+
+.idss-input-group__gray {
+  .el-input-group__append {
+    width: 32px;
+    padding: 0;
+    background: var(--color-bg-3) !important;
+    border: 1px solid var(--color-line-default) !important;
+    border-left: 0 !important;
+    border-radius: 0 4px 4px 0;
+    button {
+      width: 100%;
+      position: relative;
+      left: 11px;
+    }
+    i {
+      position: relative;
+      left: -7px;
+      color: var(--color-font-sub);
+    }
+  }
+}
+
+/* 紧贴面包屑 宽度拉满整个容器 */
+.idss-full-panel {
+  position: relative;
+  /* 用于抵消app-main.vue中的占位元素高度 */
+  top: -16px;
+  /* 
+    -8px：用来抵消app-main-container元素的padding-right
+    -16px：为了避免底部留有间距 
+    -20px：用来抵消app-main-container元素的padding-left
+  */
+  margin: 0 -8px -16px -20px;
+  z-index: var(--zindex-header);
+}
+
+/* 弹框滑块中的间距 padding 设置 */
+.idss-dialog-padding {
+  padding: 20px 20px;
+}
+
+/* 弹框滑块中的间距 margin 设置 */
+.idss-dialog-margin {
+  margin: 20px 20px;
+}
+/* 鼠标hover小手样式 */
+.idss-pointer {
+  cursor: pointer;
+}
+
+/* 加减号缩进树 */
+.idss-plus-minus-tree {
+  --tree-indent: 16px;
+  .el-tree-node {
+    position: relative;
+    /* 缩进量 视情况覆盖 */
+    padding-left: var(--tree-indent, 16px);
+    /* 竖线 */
+    &::before {
+      content: "";
+      height: 100%;
+      width: 1px;
+      position: absolute;
+      /* 位置对不上覆盖left和right */
+      left: -3px;
+      top: -5px;
+      border-width: 1px;
+      border-left: 1px dashed var(--color-line-default);
+    }
+    /* 横线 */
+    &::after {
+      content: "";
+      width: 20px;
+      height: 100%;
+      position: absolute;
+      /* 位置对不上覆盖left和right */
+      left: 0px;
+      top: 12px;
+      border-width: 1px;
+      border-top: 1px dashed var(--color-line-default);
+    }
+  }
+  .el-tree-node__children {
+    /* 缩进量 */
+    padding-left: var(--tree-indent, 16px);
+  }
+
+  .el-tree-node
+  /* 当前层最后一个节点的竖线高度固定 */
+  .el-tree-node:last-child::before {
+    /* 需要根据具体情况调整 */
+    height: 18px;
+  }
+
+  /* 展开关闭的icon */
+  .el-tree-node__expand-icon {
+    /* icon尺寸 */
+    font-size: 12px;
+    &::before {
+      /* 替换为加号 */
+      content: "\e6d9";
+      color: var(--guan-gray-7);
+      border: 1px solid var(--guan-gray-7);
+    }
+    /* 叶子节点（无子节点） */
+    &.is-leaf{
+      color: transparent;
+      &::before {
+        /* 无节点不展示icon */
+        content: '';
+        border: none;
+      }
+    }
+    /* 展开状态 */
+    &.expanded {
+      /* 取消转动动画 */
+      -webkit-transform: rotate(0deg);
+      transform: rotate(0deg);
+      &::before {
+        border-color: var(--color-line-6);
+        /* 替换为减号 */
+        content:"\e6d8";
+        color: var(--color-line-6);
+      }
+    }
+  }
+
+  /* 去掉最顶层的虚线 */
+  & > .el-tree-node::after {
+    border-top: none;
+  }
+  & > .el-tree-node::before {
+    border-left: none;
+  }
+
+  /* select-tree中的加减号缩进树 */
+  &.idss-plus-minus-select-tree {
+    .el-tree-node {
+      padding-left: 10px;
+      .el-tree-node__content {
+        padding-right: 20px;
+      }
+      /* 竖线 */
+      &::before {
+        left: -3px;
+        top: -5px;
+      }
+      /* 横线 */
+      &::after {
+        left: 0px;
+        top: 12px;
+        width: 14px;
+      }
+    }
+    
+  .el-tree-node
+    /* 当前层最后一个节点的竖线高度固定 */
+    .el-tree-node:last-child::before {
+      /* 需要根据具体情况调整 */
+      height: 18px;
+    }
+  }
+}
+
+/* 淡入淡出 */
+.fade-enter-active, .fade-leave-active {
+  transition: opacity .5s;
+}
+
+.fade-enter, .fade-leave-to {
+  opacity: 0;
+}
+/* 导出通知样式 */
+.idss-export-notification {
+  height: 50vh;
+  padding: 12px 0 0 12px;
+  & .el-scrollbar__wrap {
+    overflow-x: hidden;
+  }
+  & .el-notification__group {
+    width: 100%;
+    height: 100%;
+    & .el-notification__content {
+      width: calc(100% - 15px);
+      height: calc(100% - 50px);
+    }
+  }
+  & .el-notification__closeBtn {
+    top: 14px;
+  }
+  &__jump {
+    position: absolute;
+    right: 40px;
+    top: 6px;
+    font-size: var(--font-size-6, 12px);
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+  &__row {
+    width: 100%;
+    height: 100%;
+  }
+  &__col{
+    display: flex;
+    margin-bottom: 12px;
+    & .idss-svg-icon {
+      margin-top: 3px;
+      &--export {
+        fill: red;
+        animation: loading 1s linear infinite;
+      }
+      @keyframes loading {
+        0%{-webkit-transform:rotate(0deg);}
+        25%{-webkit-transform:rotate(90deg);}
+        50%{-webkit-transform:rotate(180deg);}
+        75%{-webkit-transform:rotate(270deg);}
+        100%{-webkit-transform:rotate(360deg);}
+      }
+    }
+  }
+  &__col:last-child {
+    margin-bottom: 0;
+  }
+  &__content {
+    width: calc(100% - 30px);
+    margin-left: 4px;
+  }
+  &__prompt {
+    color: var(--color-font-3);
+    font-size: var(--font-size-6, 12px);
+    &--hidden {
+      display: none
+    }
+    &:hover {
+      cursor: pointer;
+      text-decoration: underline;
+    }
+  }
+  &__name {
+    width: 100%;
+    font-size: var(--font-size-6, 12px);
+    font-weight: bold;
+    color: var(--color-font-1);
+  }
+  &__download {
+    display: none;
+    &--visible {
+      color: var(--color-font-2);
+      display: inline-block;
+      margin-left: 4px;
+      text-decoration: underline;
+    }
+  }
+}
+
+/* 处理表格自定义列按钮样式 */
+.el-table {
+  & .el-table__fixed-right {
+    th.column-config {
+        border-left: 1px solid var(--color-line-4);
+      & .cell {
+        padding: 0!important;
+        &:hover {
+          cursor: pointer;
+          & .idss-svg-icon {
+            fill: var(--guan-gray-10);
+          }
+        }
+        & .idss-svg-icon {
+          fill: var(--guan-gray-7);
+        }
+      }
+    }
+  }
+}
+
+/* dropdown menu适配父级宽度 */
+/* 具体配置组合使用：<el-dropdown-menu
+  :appendToBody="false"
+  :visibleArrow="false"
+  placement="bottom-left"
+  class="fit-parent"
+  :popperOptions="{
+    boundariesPadding: 0, // 边界间距都为0
+    gpuAcceleration: false, // 不适用gpu，即不适用3d
+    preventOverflowOrder: ['top', 'bottom', 'left', 'right'] // (配合placement使用后续数组，向谁对齐去掉相反方向),例如: placement='bottom-left' 使用['top', 'bottom', 'left']
+  }"/> */
+.el-dropdown-menu.fit-parent {
+  min-width: 100%;
+  &.el-popper[x-placement] {
+    margin: 0;
+  }
+  .el-dropdown-menu__item {
+    white-space: nowrap;
+  }
+}

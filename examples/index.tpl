@@ -9,7 +9,7 @@
     <title>Element - The world's most popular Vue UI framework</title>
     <meta name="description" content="Element，一套为开发者、设计师和产品经理准备的基于 Vue 2.0 的桌面端组件库" />
   </head>
-  <body>
+  <body data-theme="default">
     <script>
       if (!window.Promise) {
         document.write('<script src="//cdn.jsdelivr.net/npm/es6-promise@4.1.1/dist/es6-promise.min.js"><\/script><script>ES6Promise.polyfill()<\/script>')

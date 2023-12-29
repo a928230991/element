@@ -1,3 +1,11 @@
+/*
+ * @Author: 范祥龙 fanxl@idss-cn.com
+ * @Date: 2023-12-28 13:46:26
+ * @LastEditors: 范祥龙 fanxl@idss-cn.com
+ * @LastEditTime: 2023-12-28 16:48:54
+ * @FilePath: /element/examples/entry.js
+ * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
+ */
 import Vue from 'vue';
 import entry from './app';
 import VueRouter from 'vue-router';
@@ -15,6 +23,8 @@ import 'packages/theme-chalk/src/index.scss';
 import './demo-styles/index.scss';
 import './assets/styles/common.css';
 import './assets/styles/fonts/style.css';
+import './styles/themes/default/common.css';
+import './styles/index.scss';
 import icon from './icon.json';
 
 Vue.use(Element);
@@ -32,8 +42,10 @@ const globalEle = new Vue({
 Vue.mixin({
   computed: {
     $isEle: {
-      get: () => (globalEle.$data.$isEle),
-      set: (data) => {globalEle.$data.$isEle = data;}
+      get: () => globalEle.$data.$isEle,
+      set: (data) => {
+        globalEle.$data.$isEle = data;
+      }
     }
   }
 });
@@ -46,7 +58,7 @@ const router = new VueRouter({
   routes
 });
 
-router.afterEach(route => {
+router.afterEach((route) => {
   // https://github.com/highlightjs/highlight.js/issues/909#issuecomment-131686186
   Vue.nextTick(() => {
     const blocks = document.querySelectorAll('pre code:not(.hljs)');
@@ -63,7 +75,8 @@ router.afterEach(route => {
   ga('send', 'event', 'PageView', route.name);
 });
 
-new Vue({ // eslint-disable-line
+new Vue({
+  // eslint-disable-line
   ...entry,
   router
 }).$mount('#app');

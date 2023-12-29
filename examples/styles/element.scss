@@ -1,0 +1,4374 @@
+@import './element.var.scss';
+
+/* Input【输入框】
+------------------------------------------------------------------ */
+.el-input {
+  font-size: var(--font-size-default);
+
+  .el-input__inner {
+    color: var(--input-color);
+    border: var(--input-border);
+    background-color: var(--input-bg);
+    border-radius: var(--input-border-corner);
+    padding: var(--input-padding);
+    height: var(--input-height-l);
+    line-height: var(--input-height-l);
+  }
+
+  &--suffix {
+    .el-input__inner {
+      padding: var(--input-suffix-padding)
+    }
+  }
+
+  .el-input__inner:focus {
+    border: var(--input-border-focus);
+    caret-color: var(--input-caret-color);
+  }
+
+  .el-input__suffix {
+    .el-input__suffix-inner {
+      background-color: var(--color-bg-5);
+
+      .el-input__icon {
+        line-height: var(--input-height-l);
+        font-size: 14px;
+        width: 32px;
+        color: var(--guan-gray-4);
+
+        &:hover {
+          cursor: pointer;
+          color: var(--guan-gray-7);
+        }
+      }
+    }
+  }
+
+  .el-input__prefix {
+    .el-input__icon {
+      line-height: var(--input-height-l);
+    }
+  }
+}
+
+.el-input.is-disabled {
+  font-size: var(--font-size-default);
+
+  .el-input__inner {
+    color: var(--input-color-disabled);
+    background-color: var(--input-bg-disabled);
+    border: var(--input-border-disabled);
+    /*  border-radius: var(--input-border-corner);
+    padding: var(--input-padding);
+    height: var(--input-height-l);
+    line-height: var(--input-height-l); */
+  }
+
+  .el-input__suffix {
+    .el-input__suffix-inner {
+      background-color: transparent;
+    }
+  }
+
+  /* .el-input__suffix {
+    .el-input__suffix-inner {
+      .el-input__icon {
+        line-height: var(--input-height-l);
+      }
+    }
+  }
+  .el-input__prefix {
+    .el-input__icon {
+      line-height: var(--input-height-l);
+    }
+  } */
+}
+
+.el-input.el-input--prefix {
+  .el-input__inner {
+    padding: var(--input-prefix-padding);
+  }
+}
+
+.el-input-number {
+  line-height: var(--input-number-height-l);
+
+  .el-input-number__decrease,
+  .el-input-number__increase {
+    height: var(--input-number-height-l);
+    line-height: var(--input-number-height-l);
+  }
+}
+
+.el-input-number.is-controls-right {
+  line-height: var(--input-number-height-l);
+
+  .el-input-number__decrease {
+    line-height: 15px;
+  }
+
+  .el-input-number__increase {
+    top: 1px;
+    line-height: 15px;
+  }
+}
+
+/* 复合型输入框 */
+.el-input.el-input-group {
+  .el-input__inner {
+    border-bottom-right-radius: 0;
+    border-top-right-radius: 0;
+  }
+
+  /* 文本框后面嵌入的button颜色修改 */
+  .el-input-group__append,
+  .el-input-group__prepend {
+    color: var(--color-font-5);
+    border: none;
+    background: var(--button-primary-bg);
+
+    .el-button {
+      font-size: var(--font-size-4);
+      height: var(--input-height-l);
+      vertical-align: baseline;
+    }
+  }
+}
+
+.el-input.el-input-group.el-input--medium {
+
+  .el-input-group__append,
+  .el-input-group__prepend {
+    .el-button {
+      font-size: var(--font-size-4);
+      height: var(--input-height-m);
+      vertical-align: baseline;
+    }
+  }
+}
+
+.el-input.el-input-group.el-input--small {
+
+  .el-input-group__append,
+  .el-input-group__prepend {
+    .el-button {
+      font-size: var(--font-size-default);
+      height: var(--input-height-s);
+      vertical-align: baseline;
+    }
+  }
+}
+
+.el-input.el-input-group.el-input--mini {
+
+  .el-input-group__append,
+  .el-input-group__prepend {
+    .el-button {
+      font-size: var(--font-size-default);
+      height: var(--input-height-xs);
+      vertical-align: baseline;
+    }
+  }
+}
+
+.el-input.el-input--medium {
+  .el-input__inner {
+    height: var(--input-height-m);
+    line-height: var(--input-height-m);
+  }
+
+  .el-input__suffix {
+    .el-input__suffix-inner {
+      .el-input__icon {
+        line-height: var(--input-height-m);
+        height: var(--input-height-m);
+      }
+    }
+  }
+
+  .el-input__prefix {
+    .el-input__icon {
+      line-height: var(--input-height-m);
+      height: var(--input-height-m);
+    }
+  }
+}
+
+.el-input-number--medium {
+
+  .el-input-number__decrease,
+  .el-input-number__increase {
+    height: var(--input-number-height-m);
+    line-height: var(--input-number-height-m);
+    top: 2px;
+  }
+}
+
+.el-input-number.el-input-number--medium.is-controls-right {
+  line-height: var(--input-number-height-m);
+
+  .el-input-number__decrease {
+    line-height: 0;
+  }
+
+  .el-input-number__increase {
+    top: 1px;
+    line-height: 0;
+  }
+}
+
+.el-input.el-input--small {
+  .el-input__inner {
+    height: var(--input-height-s);
+    line-height: var(--input-height-s);
+  }
+
+  .el-input__suffix {
+    .el-input__suffix-inner {
+      .el-input__icon {
+        line-height: var(--input-height-s);
+        height: var(--input-height-s);
+      }
+    }
+  }
+
+  .el-input__prefix {
+    .el-input__icon {
+      line-height: var(--input-height-s);
+      height: var(--input-height-s);
+    }
+  }
+}
+
+.el-input-number--small {
+
+  .el-input-number__decrease,
+  .el-input-number__increase {
+    height: var(--input-number-height-s);
+    line-height: var(--input-number-height-s);
+    top: 4px;
+  }
+}
+
+.el-input.el-input--mini {
+  .el-input__inner {
+    height: var(--input-height-xs);
+    line-height: var(--input-height-xs);
+  }
+
+  .el-input__suffix {
+    .el-input__suffix-inner {
+      .el-input__icon {
+        line-height: var(--input-height-xs);
+        height: var(--input-height-xs);
+      }
+    }
+  }
+
+  .el-input__prefix {
+    .el-input__icon {
+      line-height: var(--input-height-xs);
+      height: var(--input-height-xs);
+    }
+  }
+}
+
+.el-input-number--mini {
+
+  .el-input-number__decrease,
+  .el-input-number__increase {
+    height: var(--input-number-height-xs);
+    line-height: var(--input-number-height-xs);
+    top: 6px;
+  }
+}
+
+.el-input.is-disabled {
+  background-color: var(--input-bg-disabled);
+}
+
+/* Textarea【文本】 */
+.el-textarea {
+  .el-textarea__inner {
+    font-size: var(--input-font-size);
+    padding: var(--input-textarea-padding);
+    color: var(--input-textarea-color);
+    border: var(--input-textarea-border);
+    border-radius: var(--input-textarea-border-corner);
+    background-color: var(--input-textarea-bg);
+  }
+
+  .el-textarea__inner:focus {
+    caret-color: var(--input-textarea-caret-color);
+    border: var(--input-textarea-border-focus);
+  }
+
+  &.is-disabled {
+    .el-textarea__inner {
+      color: var(--input-textarea-color-disabled);
+      border: var(--input-textarea-border-disabled);
+      background-color: var(--input-textarea-bg-disabled);
+    }
+  }
+}
+
+
+/* Checkbox【多选框】
+------------------------------------------------------------------ */
+.el-checkbox {
+  font-weight: normal;
+
+  .el-checkbox__label {
+    color: var(--checkbox-label-color);
+    font-size: var(--checkbox-label-font-size);
+  }
+
+  .el-checkbox__input {
+    .el-checkbox__inner {
+      border-color: var(--checkbox-inner-border-color);
+      background-color: var(--checkbox-inner-bg);
+
+      &:hover {
+        border-color: var(--checkbox-inner-border-color-hover);
+      }
+    }
+
+    &.is-checked {
+      .el-checkbox__inner {
+        border-color: var(--checkbox-inner-border-color-checked);
+        background-color: var(--checkbox-inner-bg-checked);
+      }
+    }
+
+    &.is-disabled {
+      .el-checkbox__inner {
+        border-color: var(--checkbox-inner-border-color-disabled);
+        background-color: var(--checkbox-inner-bg-disabled);
+      }
+    }
+
+    &.is-indeterminate {
+      .el-checkbox__inner {
+        border-color: var(--checkbox-inner-border-color-checked);
+        background-color: var(--checkbox-inner-bg-checked);
+      }
+    }
+  }
+
+  .el-checkbox__input.is-checked+.el-checkbox__label {
+    color: var(--checkbox-label-color-checked);
+  }
+
+  .el-checkbox__input.is-disabled+.el-checkbox__label {
+    color: var(--checkbox-label-color-disabled);
+  }
+}
+
+.el-checkbox-group, .el-checkbox {
+  font-size: unset;
+  line-height: var(--input-height-l);
+}
+
+.el-checkbox-group[medium],.el-checkbox[medium] {
+  line-height: var(--input-height-m);
+}
+
+.el-checkbox-group[small],.el-checkbox[small] {
+  line-height: var(--input-height-s);
+}
+
+.el-checkbox-group[mini],.el-checkbox[mini] {
+  line-height: var(--input-height-xs);
+}
+.el-checkbox-group[medium] > .el-checkbox,
+.el-checkbox-group[small] > .el-checkbox,
+.el-checkbox-group[mini] > .el-checkbox {
+  line-height: inherit;
+}
+.el-checkbox.is-bordered {
+  line-height: var(--input-height-l);
+  height: var(--input-height-l);
+  padding: var(--checkbox-is-bordered-padding);
+  border-radius: var(--button-corner);
+
+  span.checkbox__input {
+    line-height: inherit;
+    vertical-align: bottom;
+  }
+
+  span.el-checkbox__label {
+    line-height: inherit;
+    vertical-align: bottom;
+    font-size: var(--font-size-4);
+  }
+}
+
+.el-checkbox.is-bordered.el-checkbox--medium {
+  padding: var(--checkbox-is-bordered-padding);
+  line-height: var(--input-height-m);
+  height: var(--input-height-m);
+  border-radius: var(--button-corner);
+  font-size: var(--font-size-4);
+}
+
+.el-checkbox.is-bordered.el-checkbox--small {
+  padding: var(--checkbox-is-bordered-padding);
+  line-height: var(--input-height-s);
+  height: var(--input-height-s);
+  border-radius: var(--button-corner);
+
+  span.el-checkbox__label {
+    font-size: var(--font-size-6);
+  }
+}
+
+.el-checkbox.is-bordered.el-checkbox--mini {
+  padding: var(--checkbox-is-bordered-padding);
+  line-height: var(--input-height-xs);
+  height: var(--input-height-xs);
+  border-radius: var(--button-corner);
+
+  span.el-checkbox__label {
+    font-size: var(--font-size-6);
+  }
+}
+
+
+
+/* Radio【单选框】
+------------------------------------------------------------------ */
+.el-radio {
+  .el-radio__label {
+    color: var(--radio-label-color);
+    font-size: var(--radio-label-font-size);
+  }
+
+  .el-radio__input {
+    .el-radio__inner {
+      border-color: var(--radio-inner-border-color);
+      background-color: var(--radio-inner-bg);
+
+      &:hover {
+        border-color: var(--radio-inner-border-color-hover);
+      }
+    }
+
+    &.is-checked {
+      .el-radio__inner {
+        border-color: var(--radio-inner-border-color-checked);
+        background-color: var(--radio-inner-bg-checked);
+      }
+    }
+
+    &.is-disabled {
+      .el-radio__inner {
+        border-color: var(--radio-inner-border-color-disabled);
+        background-color: var(--radio-inner-bg-disabled);
+      }
+    }
+
+    &.is-indeterminate {
+      .el-radio__inner {
+        border-color: var(--radio-inner-border-color-checked);
+        background-color: var(--radio-inner-bg-checked);
+      }
+    }
+  }
+}
+
+.el-radio__input.is-checked+.el-radio__label {
+  color: var(--radio-label-color-checked);
+}
+
+.el-radio__input.is-disabled+.el-radio__label {
+  color: var(--radio-label-color-disabled);
+}
+
+
+.el-radio-group {
+  font-size: unset;
+  vertical-align: inherit;
+  line-height: var(--input-height-l);
+}
+
+.el-radio-group[medium] {
+  line-height: var(--input-height-m);
+}
+
+.el-radio-group[small] {
+  line-height: var(--input-height-s);
+}
+
+.el-radio-group[mini] {
+  line-height: var(--input-height-xs);
+}
+
+
+/* Switch【开关】
+------------------------------------------------------------------ */
+.el-switch {
+  .el-switch__core {
+    background-color: var(--color-bg-2);
+    border-color: var(--color-bg-2);
+  }
+
+  &.is-checked .el-switch__core {
+    background-color: var(--blue-5);
+    border-color: var(--blue-5);
+  }
+}
+
+.el-switch[size="mini"] {
+  width: var(--input-height-m);
+  height: var(--input-height-micro);
+
+  .el-switch__label {
+    font-size: var(--icon-size-xs);
+  }
+
+  .el-switch__core {
+    height: var(--input-height-micro);
+  }
+
+  .el-switch__core:after {
+    height: var(--icon-size-xs);
+    width: var(--icon-size-xs);
+  }
+
+  &.is-checked .el-switch__core::after {
+    margin-left: -13px;
+  }
+}
+
+.el-switch[type="green"] {
+  &.is-checked .el-switch__core {
+    background-color: var(--green-6);
+    border-color: var(--green-6);
+  }
+}
+
+/* switch 禁用 */
+.el-switch.is-disabled {
+  .el-switch__core {
+    background-color: var(--color-bg-2);
+    border-color: var(--color-bg-2);
+    opacity: .5;
+  }
+}
+
+.el-switch.is-disabled.is-checked {
+  .el-switch__core {
+    border-color: var(--blue-5);
+    background-color: var(--blue-5);
+    opacity: .5;
+  }
+}
+
+.el-switch[type="green"] {
+  &.is-disabled.is-checked .el-switch__core {
+    background-color: var(--green-6);
+    border-color: var(--green-6);
+    opacity: .5;
+  }
+}
+
+/* Avatar【头像】
+------------------------------------------------------------------ */
+[size-large] {
+  height: 48px;
+  width: 48px;
+  line-height: 48px;
+}
+
+[size-medium] {
+  height: 40px;
+  width: 40px;
+  line-height: 40px;
+}
+
+[size-small] {
+  height: 32px;
+  width: 32px;
+  line-height: 32px;
+}
+
+[size-mini] {
+  height: 28px;
+  width: 28px;
+  line-height: 28px;
+}
+
+
+/* Form【表单】
+------------------------------------------------------------------ */
+.el-form {
+  .el-form-item {
+    margin: var(--form-item-margin);
+
+    .el-form-item__label {
+      font-size: var(--form-item-label-font-size);
+      color: var(--form-item-label-color);
+      padding: var(--form-item-label-padding);
+      line-height: var(--form-item-height-l);
+    }
+
+    .el-form-item__content {
+      font-size: var(--font-size-6);
+      line-height: var(--form-item-height-l);
+
+      /* line-height: 1; */
+      .el-form-item__error {
+        color: var(--form-item-color-error);
+        font-size: var(--form-item-font-size-error);
+      }
+    }
+
+    &.is-error {
+
+      .el-input__inner,
+      .el-textarea__inner {
+        border-color: var(--form-item-border-color-error);
+        caret-color: var(--form-item-border-color-error);
+      }
+    }
+  }
+
+  .el-form-item.el-form-item--medium {
+    .el-form-item__label {
+      font-size: var(--font-size-4);
+      line-height: var(--form-item-height-m);
+    }
+
+    .el-form-item__content {
+      /* line-height: 1; */
+      font-size: var(--font-size-4);
+      line-height: var(--form-item-height-m);
+    }
+  }
+
+  .el-form-item.el-form-item--small {
+    .el-form-item__label {
+      font-size: var(--font-size-default);
+      line-height: var(--form-item-height-s);
+    }
+
+    .el-form-item__content {
+      /* line-height: 1; */
+      font-size: var(--font-size-default);
+      line-height: var(--form-item-height-s);
+    }
+  }
+
+  .el-form-item.el-form-item--mini {
+    .el-form-item__label {
+      font-size: var(--font-size-default);
+      line-height: var(--form-item-height-xs);
+    }
+
+    .el-form-item__content {
+      /* line-height: 1; */
+      font-size: var(--font-size-default);
+      line-height: var(--form-item-height-xs);
+    }
+  }
+}
+
+/* 处理表单标签与提示图标独占一行 --start */
+.el-form:not(.el-form--label-top) {
+  .el-form-item.is-required {
+    .el-form-item__label:after {
+      content: '*';
+      color: var(--color-line-7);
+      margin-left: 4px;
+    }
+  }
+}
+
+/* 调整 form 的必填*号位置，UI 规范 * 在 label 后面 */
+.el-form.el-form--label-top {
+  .el-form-item.is-required {
+    .el-form-item__label {
+      &>* {
+        /* 兼容内部有 slot 场景的宽度问题 */
+        flex-grow: 1;
+      }
+
+      display: flex;
+      flex-direction: row-reverse;
+      justify-content: flex-end;
+
+      &::before {
+        margin-left: 4px;
+        margin-right: 0;
+      }
+    }
+  }
+}
+
+.el-form.el-form--label-top {
+  .el-form-item.is-required {
+    .el-form-item__text:after {
+      content: '*';
+      color: var(--color-line-7);
+      margin-left: 4px;
+    }
+  }
+
+  .el-form-item__label {
+    width: 100%;
+    line-height: var(--input-height-s);
+    padding: 0;
+  }
+
+  .el-form-item__icon {
+    .idss-svg-icon {
+      width: 14px;
+      height: 14px;
+      fill: var(--guan-gray-6);
+
+      &:hover {
+        cursor: pointer;
+        fill: var(--guan-gray-8);
+      }
+    }
+
+  }
+}
+
+/* 处理表单标签与提示图标独占一行 --end */
+.el-form[plain] {
+  .el-form-item {
+    margin: var(--form-item-plain-margin);
+  }
+}
+
+.el-form[detailed] {
+  .el-form-item {
+    margin: var(--form-detailed-item-margin);
+    padding: 7px 0;
+
+    .el-form-item__label {
+      text-align: left;
+      color: var(--form-detailed-item-label-color);
+      padding: var(--form-detailed-item-label-padding);
+      /* 去除 label line-height 避免 label 中的文字换行的时候有间距 */
+      line-height: unset;
+    }
+
+    .el-form-item__content {
+      color: var(--form-detailed-item-content-color);
+      line-height: unset;
+    }
+  }
+}
+
+.el-form.el-form--inline {
+  .el-form-item {
+    vertical-align: bottom;
+    margin: var(--form-item-plain-margin);
+  }
+}
+
+.el-form.el-form--inline[single] {
+  .el-form-item {
+    margin: var(--form-item-single-margin);
+  }
+}
+
+.el-form[border] {
+  .el-form-item {
+    border: var(--border-default);
+    border-radius: var(--corner-default);
+
+    .el-input__inner {
+      border: none;
+    }
+  }
+}
+
+.el-form[table] {
+  border-right: 1px solid var(--color-line-3);
+  border-top: 1px solid var(--color-line-3);
+
+  .el-form-item {
+    display: flex;
+    margin: 0;
+    border-bottom: 1px solid var(--color-line-3);
+    border-left: 1px solid var(--color-line-3);
+
+    .el-form-item__label {
+      display: flex;
+      padding: var(--form-table-item-label-padding, 12px);
+      background-color: var(--color-bg-7);
+    }
+
+    &.is-error {
+      .el-form-item__content {
+        &:focus-within {
+          .el-form-item__error {
+            opacity: 1;
+            animation: opacityAnimateShow 200ms linear;
+            z-index: var(--zindex-base);
+          }
+        }
+      }
+    }
+
+    .el-form-item__content {
+      padding: var(--form-table-item-content-padding, 12px);
+      margin: 0 !important;
+      border-left: 1px solid var(--color-line-3);
+      flex: 1;
+
+      .el-form-item__error {
+        top: auto;
+        bottom: calc(100% - 6px);
+        width: calc(100% - 24px);
+        left: 12px;
+        line-height: 32px;
+        padding: 0 12px;
+        background: var(--color-bg-5, #ffffff);
+        border: 1px solid var(--color-line-5, rgba(209, 214, 222, 0.4));
+        border-radius: 4px;
+        box-shadow: var(--shadow-default-2-white);
+        opacity: 0;
+        color: var(--color-font-1);
+        font-size: var(--font-size-6);
+        z-index: -1;
+      }
+
+      .el-form-item__error:after {
+        content: '';
+        left: 50%;
+        position: absolute;
+        bottom: -8px;
+        transform: translate(-50%, -50%) rotate(315deg);
+        width: 8px;
+        height: 8px;
+        background: var(--color-bg-5, #ffffff);
+        border: 1px solid var(--color-line-5, rgba(209, 214, 222, 0.4));
+        border-style: none none solid solid;
+        box-shadow: var(--shadow-default-2-white);
+      }
+
+      .el-form-item__error:before {
+        content: '!';
+        display: inline-block;
+        width: 14px;
+        height: 14px;
+        line-height: 14px;
+        text-align: center;
+        background: var(--red-5, #eb3d40);
+        color: var(--color-bg-5, #ffffff);
+        font-weight: bold;
+        border-radius: 50%;
+        font-size: var(--font-size-4);
+      }
+    }
+  }
+
+  .el-form-item[data-line='2'] {
+    .el-form-item__label {
+      line-height: 16px;
+    }
+  }
+}
+
+.el-form[table-detailed] {
+  border-right: 1px solid var(--color-line-3);
+  border-top: 1px solid var(--color-line-3);
+
+  .el-form-item {
+    border-bottom: 1px solid var(--color-line-3);
+    border-left: 1px solid var(--color-line-3);
+  }
+
+  .el-form-item {
+    display: flex;
+    margin: 0;
+
+    .el-form-item__label {
+      color: var(--form-table-detailed-item-label-color);
+      font-size: 13px;
+      padding: var(--form-table-detailed-item-label-padding, 0);
+      background-color: var(--color-bg-7);
+    }
+
+    .el-form-item__content {
+      padding: var(--form-table-detailed-item-content-padding, 0);
+      margin: 0 !important;
+      font-size: 12px;
+      color: var(--form-table-detailed-item-content-color);
+      border-left: 1px solid var(--color-line-3);
+      flex: 1;
+    }
+  }
+}
+
+@keyframes opacityAnimateShow {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Popover【弹出框】@fixme三角
+------------------------------------------------------------------ */
+.el-popover {
+  font-size: var(--font-size-default);
+  box-shadow: var(--shadow-default-2-white);
+
+  .el-popover__title {
+    color: var(--color-font-2);
+    font-size: var(--font-size-4);
+    padding: 0 0 8px;
+    font-weight: bold;
+  }
+}
+
+
+/* Tooltip【文字提示】
+------------------------------------------------------------------ */
+.el-tooltip__popper {
+  /* 全局最大tooltip最大宽度设置 */
+  max-width: 400px;
+  max-height: 300px;
+  overflow: hidden;
+  word-break: break-all;
+  padding: var(--tooltip-padding);
+  font-size: var(--tooltip-font-size);
+}
+
+.el-tooltip__popper.is-dark {
+  background-color: var(--tooltip-bg);
+  color: var(--tooltip-color);
+}
+
+
+/* Dialog【对话框】
+------------------------------------------------------------------ */
+.el-dialog {
+  background: var(--color-bg-5);
+  border-radius: var(--corner-default);
+  box-shadow: var(--shadow-default-3-gray);
+  border: 1px solid var(--color-line-5);
+
+  .el-dialog__header {
+    padding: 12px 16px;
+    border-bottom: 1px solid var(--color-line-5);
+
+    .el-dialog__title {
+      font-size: var(--font-size-4);
+      color: var(--color-font-1);
+      font-weight: bold;
+      line-height: unset;
+    }
+
+    .el-dialog__headerbtn {
+      top: 12px;
+    }
+  }
+
+  .el-dialog__body {
+    padding: 0;
+    font-size: var(--font-size-4);
+  }
+
+  .el-dialog__footer {
+    padding: 0 20px 20px;
+    text-align: right;
+  }
+}
+
+.el-dialog__wrapper {
+  scroll-behavior: smooth;
+}
+
+/* Button【按钮】
+------------------------------------------------------------------ */
+/* -- 默认按钮 -- start */
+.el-button--default,
+.el-button--default.is-plain {
+  font-weight: normal;
+  font-size: var(--font-size-4);
+  color: var(--button-square-color);
+  border-radius: var(--button-corner);
+  border-color: var(--button-square-border-color);
+  background-color: var(--button-square-bg);
+
+  svg.idss-svg-icon {
+    fill: var(--button-square-color);
+  }
+
+  i[class^=el-tag] {
+    color: var(--button-square-color);
+    background-color: transparent;
+  }
+
+  &:focus {
+    color: var(--button-square-color-focus);
+    border-color: var(--button-square-border-color-focus);
+    background-color: var(--button-square-bg-focus);
+
+    svg.idss-svg-icon {
+      fill: var(--button-square-color-focus);
+    }
+
+    i[class^=el-tag] {
+      color: var(--button-square-color-focus);
+      background-color: var(--button-square-bg-focus);
+    }
+  }
+
+  &:hover {
+    color: var(--button-square-color-hover);
+    border-color: var(--button-square-border-color-hover);
+    background-color: var(--button-square-bg-hover);
+
+    svg.idss-svg-icon {
+      fill: var(--button-square-color-hover);
+    }
+
+    i[class^=el-tag] {
+      color: var(--button-square-color-hover);
+      background-color: var(--button-square-bg-hover);
+    }
+  }
+
+  &:active {
+    color: var(--button-square-color-active);
+    border-color: var(--button-square-border-color-active);
+    background-color: var(--button-square-bg-active);
+
+    svg.idss-svg-icon {
+      fill: var(--button-square-color-active);
+    }
+
+    i[class^=el-tag] {
+      color: var(--button-square-color-active);
+      background-color: var(--button-square-bg-active);
+    }
+  }
+
+  &.is-disabled,
+  &.is-disabled:hover,
+  &.is-disabled:focus {
+    color: var(--button-square-color-disabled);
+    border-color: var(--button-square-border-color-disabled);
+    background-color: var(--button-square-bg-disabled);
+
+    svg.idss-svg-icon {
+      fill: var(--button-square-color-disabled);
+    }
+
+    i[class^=el-tag] {
+      color: var(--button-square-color-disabled);
+      background-color: var(--button-square-bg-disabled);
+    }
+  }
+}
+
+/* -- 默认按钮-- end */
+
+/* -- secondary -- start */
+.el-button--secondary {
+  color: var(--button-secondary-color);
+  border: none;
+  background: var(--button-secondary-bg);
+
+  .idss-svg-icon {
+    fill: var(--button-secondary-color) !important;
+  }
+
+  i[class^=el-tag] {
+    color: var(--button-secondary-color);
+    background-color: transparent;
+  }
+
+  &:focus {
+    color: var(--button-secondary-color-focus);
+    background: var(--button-secondary-bg-focus);
+
+    .idss-svg-icon {
+      fill: var(--button-secondary-color-focus);
+    }
+
+    i[class^=el-tag] {
+      color: var(--button-secondary-color-focus);
+      background: var(--button-secondary-bg-focus);
+    }
+  }
+
+  &:hover {
+    color: var(--button-secondary-color-hover);
+    background: var(--button-secondary-bg-hover);
+
+    .idss-svg-icon {
+      fill: var(--button-secondary-color-hover);
+    }
+
+    i[class^=el-tag] {
+      color: var(--button-secondary-color-hover);
+      background: var(--button-secondary-bg-hover);
+    }
+  }
+
+  &:active {
+    outline: 0;
+    color: var(--button-secondary-color-active);
+    background: var(--button-secondary-bg-active);
+
+    .idss-svg-icon {
+      fill: var(--button-secondary-color-active);
+    }
+
+    i[class^=el-tag] {
+      color: var(--button-secondary-color-active);
+      background: var(--button-secondary-bg-active);
+    }
+  }
+
+  &.is-disabled,
+  &.is-disabled:hover,
+  &.is-disabled:focus {
+    opacity: 0.5;
+    color: var(--button-secondary-color);
+    background: var(--button-secondary-bg);
+
+    .idss-svg-icon {
+      fill: var(--button-secondary-color);
+    }
+
+    i[class^=el-tag] {
+      color: var(--button-secondary-color);
+      background: var(--button-secondary-bg);
+    }
+  }
+}
+
+/* -- secondary -- end */
+
+/* -- primary -- start */
+.el-button--primary {
+  color: var(--button-primary-color);
+  border-color: var(--button-primary-border-color);
+  background-color: var(--button-primary-bg);
+
+  .idss-svg-icon {
+    fill: var(--button-primary-color) !important;
+  }
+
+  i[class^=el-tag] {
+    color: var(--button-primary-color);
+    background-color: transparent;
+  }
+
+  &:focus {
+    color: var(--button-primary-color-focus);
+    border-color: var(--button-primary-border-color-focus);
+    background-color: var(--button-primary-bg-focus);
+
+    .idss-svg-icon {
+      fill: var(--button-primary-color-focus);
+    }
+
+    i[class^=el-tag] {
+      color: var(--button-primary-color-focus);
+      background-color: var(--button-primary-bg-focus);
+    }
+  }
+
+  &:hover {
+    color: var(--button-primary-color-hover);
+    border-color: var(--button-primary-border-color-hover);
+    background-color: var(--button-primary-bg-hover);
+
+    .idss-svg-icon {
+      fill: var(--button-primary-color-hover);
+    }
+
+    i[class^=el-tag] {
+      color: var(--button-primary-color-hover);
+      background-color: var(--button-primary-bg-hover);
+    }
+  }
+
+  &:active {
+    outline: 0;
+    color: var(--button-primary-color-active);
+    border-color: var(--button-primary-border-color-active);
+    background-color: var(--button-primary-bg-active);
+
+    .idss-svg-icon {
+      fill: var(--button-primary-color-active);
+    }
+
+    i[class^=el-tag] {
+      color: var(--button-primary-color-active);
+      background-color: var(--button-primary-bg-active);
+    }
+  }
+
+  &.is-disabled,
+  &.is-disabled:hover,
+  &.is-disabled:focus {
+    color: var(--button-default-color-disabled);
+    border-color: var(--button-default-border-color-disabled);
+    background-color: var(--button-default-bg-disabled);
+
+    .idss-svg-icon {
+      fill: var(--button-default-color-disabled) !important;
+    }
+
+    i[class^=el-tag] {
+      color: var(--button-default-color-disabled);
+      background-color: var(--button-default-bg-disabled);
+    }
+  }
+}
+
+/* -- primary -- end */
+
+/* -- success -- start */
+.el-button--success {
+  color: var(--button-success-color);
+  border-color: var(--button-success-border-color);
+  background-color: var(--button-success-bg);
+
+  .idss-svg-icon {
+    fill: var(--button-success-color) !important;
+  }
+
+  i[class^=el-tag] {
+    color: var(--button-success-color);
+    background-color: transparent;
+  }
+
+  &:focus {
+    color: var(--button-success-color-focus);
+    border-color: var(--button-success-border-color-focus);
+    background-color: var(--button-success-bg-focus);
+
+    .idss-svg-icon {
+      fill: var(--button-success-color-focus);
+    }
+
+    i[class^=el-tag] {
+      color: var(--button-success-color-focus);
+      background-color: var(--button-success-bg-focus);
+    }
+  }
+
+  &:hover {
+    color: var(--button-success-color-hover);
+    border-color: var(--button-success-border-color-hover);
+    background-color: var(--button-success-bg-hover);
+
+    .idss-svg-icon {
+      fill: var(--button-success-color-hover);
+    }
+
+    i[class^=el-tag] {
+      color: var(--button-success-color-hover);
+      background-color: var(--button-success-bg-hover);
+    }
+  }
+
+  &:active {
+    outline: 0;
+    color: var(--button-success-color-active);
+    border-color: var(--button-success-border-color-active);
+    background-color: var(--button-success-bg-active);
+
+    .idss-svg-icon {
+      fill: var(--button-success-color-active);
+    }
+
+    i[class^=el-tag] {
+      color: var(--button-success-color-active);
+      background-color: var(--button-success-bg-active);
+    }
+  }
+
+  &.is-disabled,
+  &.is-disabled:hover,
+  &.is-disabled:focus {
+    color: var(--button-default-color-disabled);
+    border-color: var(--button-default-border-color-disabled);
+    background-color: var(--button-default-bg-disabled);
+
+    .idss-svg-icon {
+      fill: var(--button-default-color-disabled) !important;
+    }
+
+    i[class^=el-tag] {
+      color: var(--button-default-color-disabled);
+      background-color: var(--button-default-bg-disabled);
+    }
+  }
+}
+
+/* -- success -- end */
+
+/* -- info -- start */
+.el-button--info {
+  color: var(--button-info-color);
+  border-color: var(--button-info-border-color);
+  background-color: var(--button-info-bg);
+
+  .idss-svg-icon {
+    fill: var(--button-info-color) !important;
+  }
+
+  i[class^=el-tag] {
+    color: var(--button-info-color);
+    background-color: transparent;
+  }
+
+  &:focus {
+    color: var(--button-info-color-focus);
+    border-color: var(--button-info-border-color-focus);
+    background-color: var(--button-info-bg-focus);
+
+    .idss-svg-icon {
+      fill: var(--button-info-color-focus);
+    }
+
+    i[class^=el-tag] {
+      color: var(--button-info-color-focus);
+      background-color: var(--button-info-bg-focus);
+    }
+  }
+
+  &:hover {
+    color: var(--button-info-color-hover);
+    border-color: var(--button-info-border-color-hover);
+    background-color: var(--button-info-bg-hover);
+
+    .idss-svg-icon {
+      fill: var(--button-info-color-hover);
+    }
+
+    i[class^=el-tag] {
+      color: var(--button-info-color-hover);
+      background-color: var(--button-info-bg-hover);
+    }
+  }
+
+  &:active {
+    outline: 0;
+    color: var(--button-info-color-active);
+    border-color: var(--button-info-border-color-active);
+    background-color: var(--button-info-bg-active);
+
+    .idss-svg-icon {
+      fill: var(--button-info-color-active);
+    }
+
+    i[class^=el-tag] {
+      color: var(--button-info-color-active);
+      background-color: var(--button-info-bg-active);
+    }
+  }
+
+  &.is-disabled,
+  &.is-disabled:hover,
+  &.is-disabled:focus {
+    color: var(--button-default-color-disabled);
+    border-color: var(--button-default-border-color-disabled);
+    background-color: var(--button-default-bg-disabled);
+
+    .idss-svg-icon {
+      fill: var(--button-default-color-disabled) !important;
+    }
+
+    i[class^=el-tag] {
+      color: var(--button-default-color-disabled);
+      background-color: var(--button-default-bg-disabled);
+    }
+  }
+}
+
+/* -- info -- end */
+
+/* -- warning -- start */
+.el-button--warning {
+  color: var(--button-warning-color);
+  border-color: var(--button-warning-border-color);
+  background-color: var(--button-warning-bg);
+
+  .idss-svg-icon {
+    fill: var(--button-warning-color) !important;
+  }
+
+  i[class^=el-tag] {
+    color: var(--button-warning-color);
+    background-color: transparent;
+  }
+
+  &:focus {
+    color: var(--button-warning-color-focus);
+    border-color: var(--button-warning-border-color-focus);
+    background-color: var(--button-warning-bg-focus);
+
+    .idss-svg-icon {
+      fill: var(--button-warning-color-focus);
+    }
+
+    i[class^=el-tag] {
+      color: var(--button-warning-color-focus);
+      background-color: var(--button-warning-bg-focus);
+    }
+  }
+
+  &:hover {
+    color: var(--button-warning-color-hover);
+    border-color: var(--button-warning-border-color-hover);
+    background-color: var(--button-warning-bg-hover);
+
+    .idss-svg-icon {
+      fill: var(--button-warning-color-hover);
+    }
+
+    i[class^=el-tag] {
+      color: var(--button-warning-color-hover);
+      background-color: var(--button-warning-bg-hover);
+    }
+  }
+
+  &:active {
+    outline: 0;
+    color: var(--button-warning-color-active);
+    border-color: var(--button-warning-border-color-active);
+    background-color: var(--button-warning-bg-active);
+
+    .idss-svg-icon {
+      fill: var(--button-warning-color-active);
+    }
+
+    i[class^=el-tag] {
+      color: var(--button-warning-color-active);
+      background-color: var(--button-warning-bg-active);
+    }
+  }
+
+  &.is-disabled,
+  &.is-disabled:hover,
+  &.is-disabled:focus {
+    color: var(--button-default-color-disabled);
+    border-color: var(--button-default-border-color-disabled);
+    background-color: var(--button-default-bg-disabled);
+
+    .idss-svg-icon {
+      fill: var(--button-default-color-disabled) !important;
+    }
+
+    i[class^=el-tag] {
+      color: var(--button-default-color-disabled);
+      background-color: var(--button-default-bg-disabled);
+    }
+  }
+}
+
+/* -- warning -- end */
+
+/* -- danger -- start */
+.el-button--danger {
+  color: var(--button-danger-color);
+  border-color: var(--button-danger-border-color);
+  background-color: var(--button-danger-bg);
+
+  .idss-svg-icon {
+    fill: var(--button-danger-color) !important;
+  }
+
+  i[class^=el-tag] {
+    color: var(--button-danger-color);
+    background-color: transparent;
+  }
+
+  &:focus {
+    color: var(--button-danger-color-focus);
+    border-color: var(--button-danger-border-color-focus);
+    background-color: var(--button-danger-bg-focus);
+
+    .idss-svg-icon {
+      fill: var(--button-danger-color-focus);
+    }
+
+    i[class^=el-tag] {
+      color: var(--button-danger-color-focus);
+      background-color: var(--button-danger-bg-focus);
+    }
+  }
+
+  &:hover {
+    color: var(--button-danger-color-hover);
+    border-color: var(--button-danger-border-color-hover);
+    background-color: var(--button-danger-bg-hover);
+
+    .idss-svg-icon {
+      fill: var(--button-danger-color-hover);
+    }
+
+    i[class^=el-tag] {
+      color: var(--button-danger-color-hover);
+      background-color: var(--button-danger-bg-hover);
+    }
+  }
+
+  &:active {
+    outline: 0;
+    color: var(--button-danger-color-active);
+    border-color: var(--button-danger-border-color-active);
+    background-color: var(--button-danger-bg-active);
+
+    .idss-svg-icon {
+      fill: var(--button-danger-color-active);
+    }
+
+    i[class^=el-tag] {
+      color: var(--button-danger-color-active);
+      background-color: var(--button-danger-bg-active);
+    }
+  }
+
+  &.is-disabled,
+  &.is-disabled:hover,
+  &.is-disabled:focus {
+    color: var(--button-default-color-disabled);
+    border-color: var(--button-default-border-color-disabled);
+    background-color: var(--button-default-bg-disabled);
+
+    .idss-svg-icon {
+      fill: var(--button-default-color-disabled) !important;
+    }
+
+    i[class^=el-tag] {
+      color: var(--button-default-color-disabled);
+      background-color: var(--button-default-bg-disabled);
+    }
+  }
+}
+
+/* -- danger -- end */
+
+/* -- finished -- start */
+.el-button--finished {
+  color: var(--button-finished-color);
+  border-color: var(--button-finished-border-color);
+  background-color: var(--button-finished-bg);
+
+  .idss-svg-icon {
+    fill: var(--button-finished-color) !important;
+  }
+
+  i[class^=el-tag] {
+    color: var(--button-finished-color);
+    background-color: transparent;
+  }
+
+  &:focus {
+    color: var(--button-finished-color-focus);
+    border-color: var(--button-finished-border-color-focus);
+    background-color: var(--button-finished-bg-focus);
+
+    .idss-svg-icon {
+      fill: var(--button-finished-color-focus);
+    }
+
+    i[class^=el-tag] {
+      color: var(--button-finished-color-focus);
+      background-color: var(--button-finished-bg-focus);
+    }
+  }
+
+  &:hover {
+    color: var(--button-finished-color-hover);
+    border-color: var(--button-finished-border-color-hover);
+    background-color: var(--button-finished-bg-hover);
+
+    .idss-svg-icon {
+      fill: var(--button-finished-color-hover);
+    }
+
+    i[class^=el-tag] {
+      color: var(--button-finished-color-hover);
+      background-color: var(--button-finished-bg-hover);
+    }
+  }
+
+  &:active {
+    outline: none;
+    color: var(--button-finished-color-active);
+    border-color: var(--button-finished-border-color-active);
+    background-color: var(--button-finished-bg-active);
+
+    .idss-svg-icon {
+      fill: var(--button-finished-color-active);
+    }
+
+    i[class^=el-tag] {
+      color: var(--button-finished-color-active);
+      background-color: var(--button-finished-bg-active);
+    }
+  }
+
+  &.is-disabled,
+  &.is-disabled:hover,
+  &.is-disabled:focus {
+    color: var(--button-default-color-disabled);
+    border-color: var(--button-default-border-color-disabled);
+    background-color: var(--button-default-bg-disabled);
+
+    .idss-svg-icon {
+      fill: var(--button-default-color-disabled) !important;
+    }
+
+    i[class^=el-tag] {
+      color: var(--button-default-color-disabled);
+      background-color: var(--button-default-bg-disabled);
+    }
+  }
+}
+
+/* -- finished -- end */
+
+/* -- subprimary -- start */
+.el-button--subprimary,
+.el-button--subprimary.is-plain {
+  font-weight: normal;
+  font-size: var(--font-size-4);
+  color: var(--button-square-color);
+  border-radius: var(--button-corner);
+  border-color: var(--button-square-border-color);
+  background-color: var(--button-square-bg);
+
+  svg.idss-svg-icon {
+    fill: var(--button-square-color);
+  }
+
+  i[class^=el-tag] {
+    color: var(--button-square-color);
+    background-color: transparent;
+  }
+
+  &:focus {
+    color: var(--button-square-color-focus);
+    border-color: var(--button-square-border-color-focus);
+    background-color: var(--button-square-bg-focus);
+
+    svg.idss-svg-icon {
+      fill: var(--button-square-color-focus);
+    }
+
+    i[class^=el-tag] {
+      color: var(--button-square-color-focus);
+      background-color: var(--button-square-bg-focus);
+    }
+  }
+
+  &:hover {
+    color: var(--button-square-color-hover);
+    border-color: var(--button-square-border-color-hover);
+    background-color: var(--button-square-bg-hover);
+
+    svg.idss-svg-icon {
+      fill: var(--button-square-color-hover);
+    }
+
+    i[class^=el-tag] {
+      color: var(--button-square-color-hover);
+      background-color: var(--button-square-bg-hover);
+    }
+  }
+
+  &:active {
+    color: var(--button-square-color-active);
+    border-color: var(--button-square-border-color-active);
+    background-color: var(--button-square-bg-active);
+
+    svg.idss-svg-icon {
+      fill: var(--button-square-color-active);
+    }
+
+    i[class^=el-tag] {
+      color: var(--button-square-color-active);
+      background-color: var(--button-square-bg-active);
+    }
+  }
+
+  &.is-disabled,
+  &.is-disabled:hover,
+  &.is-disabled:focus {
+    color: var(--button-square-color-disabled);
+    border-color: var(--button-square-border-color-disabled);
+    background-color: var(--button-square-bg-disabled);
+
+    svg.idss-svg-icon {
+      fill: var(--button-square-color-disabled);
+    }
+
+    i[class^=el-tag] {
+      color: var(--button-square-color-disabled);
+      background-color: var(--button-square-bg-disabled);
+    }
+  }
+}
+
+/* -- subprimary -- end */
+
+/* -- square -- start */
+.el-button--square,
+.el-button--square.is-plain {
+  font-weight: normal;
+  font-size: var(--font-size-4);
+  color: var(--button-square-color);
+  border-radius: var(--button-corner);
+  border-color: var(--button-square-border-color);
+  background-color: var(--button-square-bg);
+  padding: var(--button-square-l-padding) !important;
+
+  svg.idss-svg-icon {
+    fill: var(--button-square-color);
+    margin-right: 0 !important;
+  }
+
+  i[class^=el-tag] {
+    color: var(--button-square-color);
+    background-color: transparent;
+  }
+
+  &:focus {
+    color: var(--button-square-color-focus);
+    border-color: var(--button-square-border-color-focus);
+    background-color: var(--button-square-bg-focus);
+
+    svg.idss-svg-icon {
+      fill: var(--button-square-color-focus);
+    }
+
+    i[class^=el-tag] {
+      color: var(--button-square-color-focus);
+      background-color: var(--button-square-bg-focus);
+    }
+  }
+
+  &:hover {
+    color: var(--button-square-color-hover);
+    border-color: var(--button-square-border-color-hover);
+    background-color: var(--button-square-bg-hover);
+
+    svg.idss-svg-icon {
+      fill: var(--button-square-color-hover);
+    }
+
+    i[class^=el-tag] {
+      color: var(--button-square-color-hover);
+      background-color: var(--button-square-bg-hover);
+    }
+  }
+
+  &:active {
+    color: var(--button-square-color-active);
+    border-color: var(--button-square-border-color-active);
+    background-color: var(--button-square-bg-active);
+
+    svg.idss-svg-icon {
+      fill: var(--button-square-color-active);
+    }
+
+    i[class^=el-tag] {
+      color: var(--button-square-color-active);
+      background-color: var(--button-square-bg-active);
+    }
+  }
+
+  &.is-disabled,
+  &.is-disabled:hover,
+  &.is-disabled:focus {
+    color: var(--button-square-color-disabled);
+    border-color: var(--button-square-border-color-disabled);
+    background-color: var(--button-square-bg-disabled);
+
+    svg.idss-svg-icon {
+      fill: var(--button-square-color-disabled);
+    }
+
+    i[class^=el-tag] {
+      color: var(--button-square-color-disabled);
+      background-color: var(--button-square-bg-disabled);
+    }
+  }
+
+  &.el-button--medium {
+    padding: var(--button-square-m-padding) !important;
+  }
+
+  &.el-button--small {
+    padding: var(--button-square-s-padding) !important;
+  }
+
+  &.el-button--mini {
+    padding: var(--button-square-xs-padding) !important;
+  }
+}
+
+/* -- square -- end */
+
+/* Plain类型按钮 */
+/* -- primary -- start */
+.el-button--primary.is-plain {
+  color: var(--button-plain-primary-color);
+  border-color: var(--button-plain-primary-border-color);
+  background-color: var(--button-plain-primary-bg);
+
+  .idss-svg-icon {
+    fill: var(--button-plain-primary-color) !important;
+  }
+
+  i[class^=el-tag] {
+    color: var(--button-plain-primary-color);
+    background-color: transparent;
+  }
+
+  &:focus {
+    color: var(--button-plain-primary-color-focus);
+    border-color: var(--button-plain-primary-border-color-focus);
+    background-color: var(--button-plain-primary-bg-focus);
+
+    .idss-svg-icon {
+      fill: var(--button-plain-primary-color-focus);
+    }
+
+    i[class^=el-tag] {
+      color: var(--button-plain-primary-color-focus);
+      background-color: var(--button-plain-primary-bg-focus);
+    }
+  }
+
+  &:hover {
+    color: var(--button-plain-primary-color-hover);
+    border-color: var(--button-plain-primary-border-color-hover);
+    background-color: var(--button-plain-primary-bg-hover);
+
+    .idss-svg-icon {
+      fill: var(--button-plain-primary-color-hover) !important;
+    }
+
+    i[class^=el-tag] {
+      color: var(--button-plain-primary-color-hover);
+      background-color: var(--button-plain-primary-bg-hover);
+    }
+  }
+
+  &:active {
+    outline: 0;
+    color: var(--button-plain-primary-color-active);
+    border-color: var(--button-plain-primary-border-color-active);
+    background-color: var(--button-plain-primary-bg-active);
+
+    .idss-svg-icon {
+      fill: var(--button-plain-primary-color-active) !important;
+    }
+
+    i[class^=el-tag] {
+      color: var(--button-plain-primary-color-active);
+      background-color: var(--button-plain-primary-bg-active);
+    }
+  }
+
+  &.is-disabled,
+  &.is-disabled:hover,
+  &.is-disabled:focus {
+    opacity: 0.5;
+    color: var(--button-plain-primary-color);
+    border-color: var(--button-plain-primary-border-color);
+    background-color: var(--button-plain-primary-bg);
+
+    .idss-svg-icon {
+      fill: var(--button-plain-primary-color) !important;
+    }
+
+    i[class^=el-tag] {
+      color: var(--button-plain-primary-color);
+      background-color: var(--button-plain-primary-bg);
+    }
+  }
+}
+
+/* -- primary -- end */
+
+/* -- success -- start */
+.el-button--success.is-plain {
+  color: var(--button-plain-success-color);
+  border-color: var(--button-plain-success-border-color);
+  background-color: var(--button-plain-success-bg);
+
+  .idss-svg-icon {
+    fill: var(--button-plain-success-color) !important;
+  }
+
+  i[class^=el-tag] {
+    color: var(--button-plain-success-color);
+    background-color: transparent;
+  }
+
+  &:focus {
+    color: var(--button-plain-success-color-focus);
+    border-color: var(--button-plain-success-border-color-focus);
+    background-color: var(--button-plain-success-bg-focus);
+
+    .idss-svg-icon {
+      fill: var(--button-plain-success-color-focus);
+    }
+
+    i[class^=el-tag] {
+      color: var(--button-plain-success-color-focus);
+      background-color: var(--button-plain-success-bg-focus);
+    }
+  }
+
+  &:hover {
+    color: var(--button-plain-success-color-hover);
+    border-color: var(--button-plain-success-border-color-hover);
+    background-color: var(--button-plain-success-bg-hover);
+
+    .idss-svg-icon {
+      fill: var(--button-plain-success-color-hover) !important;
+    }
+
+    i[class^=el-tag] {
+      color: var(--button-plain-success-color-hover);
+      background-color: var(--button-plain-success-bg-hover);
+    }
+  }
+
+  &:active {
+    outline: 0;
+    color: var(--button-plain-success-color-active);
+    border-color: var(--button-plain-success-border-color-active);
+    background-color: var(--button-plain-success-bg-active);
+
+    .idss-svg-icon {
+      fill: var(--button-plain-success-color-active);
+    }
+
+    i[class^=el-tag] {
+      color: var(--button-plain-success-color-active);
+      background-color: var(--button-plain-success-bg-active);
+    }
+  }
+
+  &.is-disabled,
+  &.is-disabled:hover,
+  &.is-disabled:focus {
+    opacity: 0.5;
+    color: var(--button-plain-success-color);
+    border-color: var(--button-plain-success-border-color);
+    background-color: var(--button-plain-success-bg);
+
+    .idss-svg-icon {
+      fill: var(--button-plain-success-color) !important;
+    }
+
+    i[class^=el-tag] {
+      color: var(--button-plain-success-color);
+      background-color: var(--button-plain-success-bg);
+    }
+  }
+}
+
+/* -- success -- end */
+
+/* -- info -- start */
+.el-button--info.is-plain {
+  color: var(--button-plain-info-color);
+  border-color: var(--button-plain-info-border-color);
+  background-color: var(--button-plain-info-bg);
+
+  .idss-svg-icon {
+    fill: var(--button-plain-info-color) !important;
+  }
+
+  i[class^=el-tag] {
+    color: var(--button-plain-info-color);
+    background-color: transparent;
+  }
+
+  &:focus {
+    color: var(--button-plain-info-color-focus);
+    border-color: var(--button-plain-info-border-color-focus);
+    background-color: var(--button-plain-info-bg-focus);
+
+    .idss-svg-icon {
+      fill: var(--button-plain-info-color-focus) !important;
+    }
+
+    i[class^=el-tag] {
+      color: var(--button-plain-info-color-focus);
+      background-color: var(--button-plain-info-bg-focus);
+    }
+  }
+
+  &:hover {
+    color: var(--button-plain-info-color-hover);
+    border-color: var(--button-plain-info-border-color-hover);
+    background-color: var(--button-plain-info-bg-hover);
+
+    .idss-svg-icon {
+      fill: var(--button-plain-info-color-hover) !important;
+    }
+
+    i[class^=el-tag] {
+      color: var(--button-plain-info-color-hover);
+      background-color: var(--button-plain-info-bg-hover);
+    }
+  }
+
+  &:active {
+    outline: 0;
+    color: var(--button-plain-info-color-active);
+    border-color: var(--button-plain-info-border-color-active);
+    background-color: var(--button-plain-info-bg-active);
+
+    .idss-svg-icon {
+      fill: var(--button-plain-info-color-active) !important;
+    }
+
+    i[class^=el-tag] {
+      color: var(--button-plain-info-color-active);
+      background-color: var(--button-plain-info-bg-active);
+    }
+  }
+
+  &.is-disabled,
+  &.is-disabled:hover,
+  &.is-disabled:focus {
+    opacity: 0.5;
+    color: var(--button-plain-info-color);
+    border-color: var(--button-plain-info-border-color);
+    background-color: var(--button-plain-info-bg);
+
+    .idss-svg-icon {
+      fill: var(--button-plain-info-color) !important;
+    }
+
+    i[class^=el-tag] {
+      color: var(--button-plain-info-color);
+      background-color: var(--button-plain-info-bg);
+    }
+  }
+}
+
+/* -- info -- end */
+
+/* -- warning -- start */
+.el-button--warning.is-plain {
+  color: var(--button-plain-warning-color);
+  border-color: var(--button-plain-warning-border-color);
+  background-color: var(--button-plain-warning-bg);
+
+  .idss-svg-icon {
+    fill: var(--button-plain-warning-color) !important;
+  }
+
+  i[class^=el-tag] {
+    color: var(--button-plain-warning-color);
+    background-color: transparent;
+  }
+
+  &:focus {
+    color: var(--button-plain-warning-color-focus);
+    border-color: var(--button-plain-warning-border-color-focus);
+    background-color: var(--button-plain-warning-bg-focus);
+
+    .idss-svg-icon {
+      fill: var(--button-plain-warning-color-focus);
+    }
+
+    i[class^=el-tag] {
+      color: var(--button-plain-warning-color-focus);
+      background-color: var(--button-plain-warning-bg-focus);
+    }
+  }
+
+  &:hover {
+    color: var(--button-plain-warning-color-hover);
+    background-color: var(--button-plain-warning-bg-hover);
+    border-color: var(--button-plain-warning-border-color-hover);
+
+    .idss-svg-icon {
+      fill: var(--button-plain-warning-color-hover) !important;
+    }
+
+    i[class^=el-tag] {
+      color: var(--button-plain-warning-color-hover);
+      background-color: var(--button-plain-warning-bg-hover);
+    }
+  }
+
+  &:active {
+    outline: 0;
+    color: var(--button-plain-warning-color-active);
+    border-color: var(--button-plain-warning-border-color-active);
+    background-color: var(--button-plain-warning-bg-active);
+
+    .idss-svg-icon {
+      fill: var(--button-plain-warning-color-active) !important;
+    }
+
+    i[class^=el-tag] {
+      color: var(--button-plain-warning-color-active);
+      background-color: var(--button-plain-warning-bg-active);
+    }
+  }
+
+  &.is-disabled,
+  &.is-disabled:hover,
+  &.is-disabled:focus {
+    opacity: 0.5;
+    color: var(--button-plain-warning-color);
+    border-color: var(--button-plain-warning-border-color);
+    background-color: var(--button-plain-warning-bg);
+
+    .idss-svg-icon {
+      fill: var(--button-plain-warning-color) !important;
+    }
+
+    i[class^=el-tag] {
+      color: var(--button-plain-warning-color);
+      background-color: var(--button-plain-warning-bg);
+    }
+  }
+}
+
+/* -- warning -- end */
+
+/* -- danger -- start */
+.el-button--danger.is-plain {
+  color: var(--button-plain-danger-color);
+  border-color: var(--button-plain-danger-border-color);
+  background-color: var(--button-plain-danger-bg);
+
+  .idss-svg-icon {
+    fill: var(--button-plain-danger-color) !important;
+  }
+
+  i[class^=el-tag] {
+    color: var(--button-plain-danger-color);
+    background-color: transparent;
+  }
+
+  &:focus {
+    color: var(--button-plain-danger-color-focus);
+    border-color: var(--button-plain-danger-border-color-focus);
+    background-color: var(--button-plain-danger-bg-focus);
+
+    .idss-svg-icon {
+      fill: var(--button-plain-danger-color-focus);
+    }
+
+    i[class^=el-tag] {
+      color: var(--button-plain-danger-color-focus);
+      background-color: var(--button-plain-danger-bg-focus);
+    }
+  }
+
+  &:hover {
+    color: var(--button-plain-danger-color-hover);
+    border-color: var(--button-plain-danger-border-color-hover);
+    background-color: var(--button-plain-danger-bg-hover);
+
+    .idss-svg-icon {
+      fill: var(--button-plain-danger-color-hover) !important;
+    }
+
+    i[class^=el-tag] {
+      color: var(--button-plain-danger-color-hover);
+      background-color: var(--button-plain-danger-bg-hover);
+    }
+  }
+
+  &:active {
+    outline: 0;
+    color: var(--button-plain-danger-color-active);
+    border-color: var(--button-plain-danger-border-color-active);
+    background: var(--button-plain-danger-bg-active);
+
+    .idss-svg-icon {
+      fill: var(--button-plain-danger-color-active) !important;
+    }
+
+    i[class^=el-tag] {
+      color: var(--button-plain-danger-color-active);
+      background-color: var(--button-plain-danger-bg-active);
+    }
+  }
+
+  &.is-disabled,
+  &.is-disabled:hover,
+  &.is-disabled:focus {
+    opacity: 0.5;
+    color: var(--button-plain-danger-color);
+    border-color: var(--button-plain-danger-border-color);
+    background-color: var(--button-plain-danger-bg);
+
+    .idss-svg-icon {
+      fill: var(--button-plain-danger-color) !important;
+    }
+
+    i[class^=el-tag] {
+      color: var(--button-plain-danger-color);
+      background-color: var(--button-plain-danger-bg);
+    }
+  }
+}
+
+/* -- danger -- end */
+
+/* -- finished -- start */
+.el-button--finished.is-plain {
+  color: var(--button-plain-finished-color);
+  border-color: var(--button-plain-finished-border-color);
+  background-color: var(--button-plain-finished-bg);
+
+  .idss-svg-icon {
+    fill: var(--button-plain-finished-color) !important;
+  }
+
+  i[class^=el-tag] {
+    color: var(--button-plain-finished-color);
+    background-color: transparent;
+  }
+
+  &:focus {
+    color: var(--button-plain-finished-color-focus);
+    border-color: var(--button-plain-finished-border-color-focus);
+    background-color: var(--button-plain-finished-bg-focus);
+
+    .idss-svg-icon {
+      fill: var(--button-plain-finished-color-focus);
+    }
+
+    i[class^=el-tag] {
+      color: var(--button-plain-finished-color-focus);
+      background-color: var(--button-plain-finished-bg-focus);
+    }
+  }
+
+  &:hover {
+    color: var(--button-plain-finished-color-hover);
+    border-color: var(--button-plain-finished-border-color-hover);
+    background-color: var(--button-plain-finished-bg-hover);
+
+    .idss-svg-icon {
+      fill: var(--button-plain-finished-color-hover) !important;
+    }
+
+    i[class^=el-tag] {
+      color: var(--button-plain-finished-color-hover);
+      background-color: var(--button-plain-finished-bg-hover);
+    }
+  }
+
+  &:active {
+    outline: none;
+    color: var(--button-plain-finished-color-active);
+    border-color: var(--button-plain-finished-border-color-active);
+    background-color: var(--button-plain-finished-bg-active);
+
+    .idss-svg-icon {
+      fill: var(--button-plain-finished-color-active) !important;
+    }
+
+    i[class^=el-tag] {
+      color: var(--button-plain-finished-color-active);
+      background-color: var(--button-plain-finished-bg-active);
+    }
+  }
+
+  &.is-disabled,
+  &.is-disabled:hover,
+  &.is-disabled:focus {
+    opacity: 0.5;
+    color: var(--button-plain-finished-color);
+    border-color: var(--button-plain-finished-border-color);
+    background-color: var(--button-plain-finished-bg);
+
+    .idss-svg-icon {
+      fill: var(--button-plain-finished-color) !important;
+    }
+
+    i[class^=el-tag] {
+      color: var(--button-plain-finished-color);
+      background-color: var(--button-plain-finished-bg);
+    }
+  }
+}
+
+/* -- finished -- end */
+
+/* 默认文字按钮【灰色】 -- start */
+.el-button--text {
+  color: var(--guan-gray-8);
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+
+  &.is-disabled {
+    color: var(--button-text-color-disabled)
+  }
+
+  &:not(.is-disabled):focus {
+    color: var(--button-text-color-focus);
+    border-color: transparent;
+    background-color: transparent;
+  }
+
+  &:not(.is-disabled):hover {
+    color: var(--button-text-color-hover);
+    border-color: transparent;
+    background-color: transparent;
+  }
+
+  &:not(.is-disabled):active {
+    color: var(--button-text-color-active);
+    background-color: transparent;
+  }
+}
+
+/* 默认文字按钮【灰色】 -- end */
+
+/* 默认文字按钮【蓝色】 -- start */
+.el-button--text[primary] {
+  color: var(--button-text-color);
+
+  &.is-disabled {
+    color: var(--button-text-color-disabled)
+  }
+
+  &:not(.is-disabled):focus {
+    color: var(--button-text-color-focus);
+    border-color: transparent;
+    background-color: transparent;
+  }
+
+  &:not(.is-disabled):hover {
+    color: var(--button-text-color-hover);
+    border-color: transparent;
+    background-color: transparent;
+  }
+
+  &:not(.is-disabled):active {
+    color: var(--button-text-color-active);
+    background-color: transparent;
+  }
+}
+
+/* 默认文字按钮【蓝色】 -- end */
+
+/* 默认文字按钮【蓝色】，触发后带下划线的文字按钮 -- start */
+.el-button--text[underline] {
+  color: var(--button-text-color);
+
+  &.is-disabled {
+    color: var(--button-text-color-disabled)
+  }
+
+  &:not(.is-disabled):focus {
+    color: var(--button-text-color-focus);
+    border-color: transparent;
+    background-color: transparent;
+  }
+
+  &:not(.is-disabled):hover {
+    color: var(--button-text-color-hover);
+    border-color: transparent;
+    background-color: transparent;
+    text-decoration: underline;
+  }
+
+  &:not(.is-disabled):active {
+    color: var(--button-text-color-active);
+    background-color: transparent;
+  }
+}
+
+/* 默认文字按钮【蓝色】，触发后带下划线的文字按钮 -- end */
+
+.el-button+.el-button {
+  margin-left: var(--idss-margin-small);
+}
+
+.el-button [class*=el-icon-]+span {
+  margin-left: 0px;
+}
+
+.el-button.el-button--medium+.el-button.el-button--medium {
+  margin-left: var(--idss-margin-small);
+}
+
+.el-button.el-button--small+.el-button.el-button--small {
+  margin-left: var(--idss-margin-small);
+}
+
+.el-button.el-button--mini+.el-button.el-button--mini {
+  margin-left: var(--idss-margin-small);
+}
+
+/* 筛选器中-快捷时间-第一个button的margin-left未生效 */
+.idss_time_select_quick_box {
+  .el-button.el-button--text:first-child {
+    margin-left: var(--idss-margin-small);
+  }
+}
+
+/* 控制所有按钮尺寸 start */
+.el-button {
+  padding: var(--button-main-l-padding);
+  height: var(--input-height-l);
+
+  & i {
+    font-size: var(--font-size-4);
+  }
+
+  & svg.idss-svg-icon {
+    width: var(--font-size-4);
+    height: var(--font-size-4);
+    vertical-align: -2px;
+    margin-right: var(--button-icon-svg-margin);
+  }
+
+  span {
+    line-height: inherit;
+    /* middle 会导致文本下移，不建议开启 */
+    /* vertical-align: middle; */
+  }
+
+  /* el-table表头自定义列按钮start */
+  &.el-button--default[setting] {
+    width: 32px;
+    height: 43px;
+    padding: 0;
+    border-radius: 0;
+    text-align: center;
+    display: inline-block;
+    border: 1px solid var(--color-line-4);
+    border-left: 1px solid var(--color-line-3);
+    background-color: var(--table-header-bg);
+
+    & .idss-svg-icon {
+      fill: var(--guan-gray-7);
+    }
+  }
+
+  &.el-button--default[setting] svg.idss-svg-icon {
+    margin-right: 0;
+  }
+
+  &.el-button--default[setting]:hover {
+    cursor: pointer;
+    background-color: var(--table-header-bg);
+  }
+
+  &.el-button--default[setting]:hover svg.idss-svg-icon {
+    fill: var(--guan-gray-10);
+    background-color: var(--table-header-bg);
+  }
+
+  /* el-table表头自定义列按钮end */
+
+}
+
+.el-button--medium {
+  padding: var(--button-main-m-padding);
+  font-size: var(--font-size-4);
+  height: var(--input-height-m);
+
+  & i {
+    font-size: var(--font-size-4);
+  }
+
+  & svg.idss-svg-icon {
+    width: var(--font-size-4);
+    height: var(--font-size-4);
+    vertical-align: -2px;
+  }
+}
+
+.el-button--small {
+  padding: var(--button-main-s-padding);
+  font-size: var(--font-size-default);
+  height: var(--input-height-s);
+  border-radius: var(--corner-default);
+
+  & i {
+    font-size: var(--font-size-default);
+  }
+
+  & svg.idss-svg-icon {
+    width: var(--font-size-default);
+    height: var(--font-size-default);
+    vertical-align: -1.01px;
+  }
+}
+
+.el-button--mini {
+  padding: var(--button-main-xs-padding);
+  font-size: var(--font-size-default);
+  height: var(--input-height-xs);
+  font-weight: 400;
+  border-radius: var(--corner-default);
+
+  & i {
+    font-size: var(--font-size-default);
+  }
+
+  & svg.idss-svg-icon {
+    width: var(--font-size-default);
+    height: var(--font-size-default);
+    vertical-align: -1.01px;
+  }
+}
+
+/* 控制所有按钮尺寸 end */
+
+/* 控制所有按钮padding narrow start */
+.el-button[narrow] {
+  padding: var(--button-narrow-l-padding);
+}
+
+.el-button--medium[narrow] {
+  padding: var(--button-narrow-m-padding);
+}
+
+.el-button--small[narrow] {
+  padding: var(--button-narrow-s-padding);
+}
+
+.el-button--mini[narrow] {
+  padding: var(--button-narrow-xs-padding);
+}
+
+/* 控制所有按钮padding narrow end */
+
+/* plain 类型按钮 */
+.el-button.el-button--medium.is-plain {
+  padding: var(--button-plain-m-padding);
+  font-size: var(--font-size-4);
+  line-height: 1;
+}
+
+.el-button.el-button--small.is-plain {
+  padding: var(--button-plain-s-padding);
+  font-size: var(--font-size-default);
+  line-height: 1;
+}
+
+.el-button.el-button--mini.is-plain {
+  padding: var(--button-plain-xs-padding);
+  font-size: var(--font-size-default);
+  line-height: 1;
+}
+
+/* plain 类型按钮 narrow start */
+.el-button.el-button--medium.is-plain[narrow] {
+  padding: var(--button-narrow-m-padding);
+}
+
+.el-button.el-button--small.is-plain[narrow] {
+  padding: var(--button-narrow-s-padding);
+}
+
+.el-button.el-button--mini.is-plain[narrow] {
+  padding: var(--button-narrow-xs-padding);
+}
+
+/* plain 类型按钮 narrow end */
+
+
+/* 控制所有圆角操作按钮 start */
+.el-button {
+
+  /* 该样式影响了表格的对齐方式，在不影响按钮的样式下先去掉该css */
+  /* vertical-align: middle; */
+  /* 默认按钮 */
+  &.is-plain.is-circle,
+  &.is-circle {
+    border-radius: 50%;
+    padding: 5px;
+
+    & i {
+      font-size: var(--icon-size-default);
+    }
+
+    & svg.idss-svg-icon {
+      width: var(--icon-size-default);
+      height: var(--icon-size-default);
+      vertical-align: -2px;
+      margin-right: 0;
+    }
+  }
+
+  /* medium按钮 */
+  &.el-button--medium.is-plain.is-circle,
+  &.el-button--medium.is-circle {
+    border-radius: 50%;
+
+    & i {
+      font-size: var(--icon-size-m);
+    }
+
+    & svg.idss-svg-icon {
+      width: var(--icon-size-m);
+      height: var(--icon-size-m);
+      vertical-align: -2px;
+    }
+  }
+
+  /* small按钮 */
+  &.el-button--small.is-plain.is-circle,
+  &.el-button--small.is-circle {
+    border-radius: 50%;
+    padding: 4px;
+
+    & i {
+      font-size: var(--icon-size-s);
+    }
+
+    & svg.idss-svg-icon {
+      width: var(--icon-size-s);
+      height: var(--icon-size-s);
+      vertical-align: -1.01px;
+    }
+  }
+
+  /* mini按钮 */
+  &.el-button--mini.is-plain.is-circle,
+  &.el-button--mini.is-circle {
+    border-radius: 50%;
+    padding: 3px;
+
+    & i {
+      font-size: var(--icon-size-xs);
+    }
+
+    & svg.idss-svg-icon {
+      width: var(--icon-size-xs);
+      height: var(--icon-size-xs);
+      vertical-align: -1.01px;
+    }
+  }
+
+  /* micro按钮 */
+  &.is-circle[micro] {
+    border-radius: 50%;
+    width: var(--icon-size-m);
+    height: var(--icon-size-m);
+    padding: 3px;
+
+    & svg.idss-svg-icon {
+      width: var(--icon-size-xxs);
+      height: var(--icon-size-xxs);
+      vertical-align: top;
+    }
+  }
+}
+
+/* 控制所有圆角操作按钮 end */
+
+/* Icon【图标按钮】
+------------------------------------------------------------------ */
+[class^=idss-button] {
+  background-color: unset;
+  cursor: pointer;
+  padding: 0px 8px;
+  vertical-align: baseline;
+  border: none;
+  height: var(--input-height-l);
+
+  svg.idss-svg-icon {
+    width: var(--input-height-l);
+    height: var(--input-height-l);
+    fill: var(--color-font-2);
+    margin-right: var(--button-icon-svg-margin);
+  }
+
+  &:hover {
+    color: var(--color-font-default);
+
+    svg.idss-svg-icon {
+      fill: var(--color-font-default);
+    }
+  }
+}
+
+/* 注释图标按钮 */
+[class^=idss-button][note] {
+  svg.idss-svg-icon {
+    fill: var(--color-font-3);
+  }
+
+  &:hover {
+    svg.idss-svg-icon {
+      fill: var(--color-font-default);
+    }
+  }
+}
+
+/* 禁用图标按钮 */
+[class^=idss-button][disabled] {
+  cursor: not-allowed;
+  color: var(--color-font-4);
+
+  svg.idss-svg-icon {
+    fill: var(--color-font-4);
+  }
+}
+
+[class^=idss-button][size="medium"] {
+  height: var(--input-height-m);
+
+  svg.idss-svg-icon {
+    width: var(--input-height-m);
+    height: var(--input-height-m);
+  }
+}
+
+[class^=idss-button][size="small"] {
+  height: var(--input-height-s);
+
+  svg.idss-svg-icon {
+    width: var(--input-height-s);
+    height: var(--input-height-s);
+  }
+}
+
+[class^=idss-button][size="mini"] {
+  height: var(--input-height-xs);
+
+  svg.idss-svg-icon {
+    width: var(--input-height-xs);
+    height: var(--input-height-xs);
+  }
+}
+
+[class^=idss-button][size="micro"] {
+  height: var(--input-height-micro);
+
+  svg.idss-svg-icon {
+    width: var(--input-height-micro);
+    height: var(--input-height-micro);
+  }
+}
+
+[class^=idss-button].is-active {
+  color: var(--color-font-default);
+
+  .idss-svg-icon {
+    fill: var(--color-font-default);
+  }
+}
+
+
+/* Tag 标签按钮 */
+/* 标签大小 */
+.el-tag {
+  padding: var(--tag-plain-l-padding);
+  font-size: var(--font-size-4);
+  line-height: 1;
+}
+
+.el-tag.el-tag--medium {
+  padding: var(--tag-plain-m-padding);
+  font-size: var(--font-size-4);
+  line-height: 1;
+}
+
+.el-tag.el-tag--small {
+  padding: var(--tag-plain-s-padding);
+  font-size: var(--font-size-default);
+  line-height: 1;
+}
+
+.el-tag.el-tag--mini {
+  padding: var(--tag-plain-xs-padding);
+  font-size: var(--font-size-default);
+  line-height: 1;
+}
+
+/* ----- plan start ------- */
+
+/* -- primary -- start */
+.el-tag {
+  color: var(--tag-plain-primary-color);
+  border-color: var(--tag-plain-primary-border-color);
+  background-color: var(--tag-plain-primary-bg);
+
+  i[class^=el-tag] {
+    color: var(--tag-plain-primary-icon-color);
+    background-color: var(--tag-plain-primary-icon-bg);
+
+    &:hover {
+      color: var(--tag-plain-primary-icon-color-hover);
+      background-color: var(--tag-plain-primary-icon-bg-hover);
+    }
+  }
+}
+
+/* -- primary -- end */
+
+/* -- success -- start */
+.el-tag.el-tag--success {
+  color: var(--tag-plain-success-color);
+  border-color: var(--tag-plain-success-border-color);
+  background-color: var(--tag-plain-success-bg);
+
+  i[class^=el-tag] {
+    color: var(--tag-plain-success-icon-color);
+    background-color: var(--tag-plain-success-icon-bg);
+
+    &:hover {
+      color: var(--tag-plain-success-icon-color-hover);
+      background-color: var(--tag-plain-success-icon-bg-hover);
+    }
+  }
+}
+
+/* -- success -- end */
+
+/* -- info -- start */
+.el-tag.el-tag--info {
+  color: var(--tag-plain-info-color);
+  border-color: var(--tag-plain-info-border-color);
+  background-color: var(--tag-plain-info-bg);
+
+  i[class^=el-tag] {
+    color: var(--tag-plain-info-color);
+    background-color: var(--tag-plain-info-icon-bg);
+
+    &:hover {
+      color: var(--tag-plain-info-icon-color-hover);
+      background-color: var(--tag-plain-info-icon-bg-hover);
+    }
+  }
+}
+
+/* -- info -- end */
+
+/* -- warning -- start */
+.el-tag.el-tag--warning {
+  color: var(--tag-plain-warning-color);
+  border-color: var(--tag-plain-warning-border-color);
+  background-color: var(--tag-plain-warning-bg);
+
+  i[class^=el-tag] {
+    color: var(--tag-plain-warning-icon-color);
+    background-color: var(--tag-plain-warning-icon-bg);
+
+    &:hover {
+      color: var(--tag-plain-warning-icon-color-hover);
+      background-color: var(--tag-plain-warning-icon-bg-hover);
+    }
+  }
+}
+
+/* -- warning -- end */
+
+/* -- danger -- start */
+.el-tag.el-tag--danger {
+  color: var(--tag-plain-danger-color);
+  border-color: var(--tag-plain-danger-border-color);
+  background-color: var(--tag-plain-danger-bg);
+
+  i[class^=el-tag] {
+    color: var(--tag-plain-danger-icon-color);
+    background-color: var(--tag-plain-danger-icon-bg);
+
+    &:hover {
+      color: var(--tag-plain-danger-icon-color-hover);
+      background-color: var(--tag-plain-danger-icon-bg-hover);
+    }
+  }
+}
+
+/* -- danger -- end */
+
+/* -- finished -- start */
+.el-tag.el-tag--finished {
+  color: var(--tag-plain-finished-color);
+  border-color: var(--tag-plain-finished-border-color);
+  background-color: var(--tag-plain-finished-bg);
+
+  i[class^=el-tag] {
+    color: var(--tag-plain-finished-icon-color);
+    background-color: var(--tag-plain-finished-icon-bg);
+
+    &:hover {
+      color: var(--tag-plain-finished-icon-color-hover);
+      background-color: var(--tag-plain-finished-icon-bg-hover);
+    }
+  }
+}
+
+/* -- finished -- end */
+
+/* -- subprimary -- start */
+.el-tag.el-tag--subprimary {
+  color: var(--tag-plain-subprimary-color);
+  border-color: var(--tag-plain-subprimary-border-color);
+  background-color: var(--tag-plain-subprimary-bg);
+
+  i[class^=el-tag] {
+    color: var(--tag-plain-subprimary-icon-color);
+    background-color: var(--tag-plain-subprimary-icon-bg);
+
+    &:hover {
+      color: var(--tag-plain-subprimary-icon-color-hover);
+      background-color: var(--tag-plain-subprimary-icon-bg-hover);
+    }
+  }
+}
+
+/* -- subprimary -- end */
+
+/* ----- plan end ------- */
+
+/* ----- dark start ------- */
+
+/* -- primary -- start */
+.el-tag.el-tag--dark {
+  color: var(--tag-dark-primary-color);
+  border-color: var(--tag-dark-primary-border-color);
+  background-color: var(--tag-dark-primary-bg);
+
+  i[class^=el-tag] {
+    color: var(--tag-dark-primary-icon-color);
+    background-color: var(--tag-dark-primary-icon-bg);
+
+    &:hover {
+      color: var(--tag-dark-primary-icon-color-hover);
+      background-color: var(--tag-dark-primary-icon-bg-hover);
+    }
+  }
+}
+
+/* -- primary -- end */
+
+/* -- success -- start */
+.el-tag.el-tag--dark.el-tag--success {
+  color: var(--tag-dark-success-color);
+  border-color: var(--tag-dark-success-border-color);
+  background-color: var(--tag-dark-success-bg);
+
+  i[class^=el-tag] {
+    color: var(--tag-dark-success-icon-color);
+    background-color: var(--tag-dark-success-icon-bg);
+
+    &:hover {
+      color: var(--tag-dark-success-icon-color-hover);
+      background-color: var(--tag-dark-success-icon-bg-hover);
+    }
+  }
+}
+
+/* -- success -- end */
+
+/* -- info -- start */
+.el-tag.el-tag--dark.el-tag--info {
+  color: var(--tag-dark-info-color);
+  border-color: var(--tag-dark-info-border-color);
+  background-color: var(--tag-dark-info-bg);
+
+  i[class^=el-tag] {
+    color: var(--tag-dark-info-color);
+    background-color: var(--tag-dark-info-icon-bg);
+
+    &:hover {
+      color: var(--tag-dark-info-icon-color-hover);
+      background-color: var(--tag-dark-info-icon-bg-hover);
+    }
+  }
+}
+
+/* -- info -- end */
+
+/* -- warning -- start */
+.el-tag.el-tag--dark.el-tag--warning {
+  color: var(--tag-dark-warning-color);
+  border-color: var(--tag-dark-warning-border-color);
+  background-color: var(--tag-dark-warning-bg);
+
+  i[class^=el-tag] {
+    color: var(--tag-dark-warning-color);
+    background-color: var(--tag-dark-warning-icon-bg);
+
+    &:hover {
+      color: var(--tag-dark-warning-icon-color-hover);
+      background-color: var(--tag-dark-warning-icon-bg-hover);
+    }
+  }
+}
+
+/* -- warning -- end */
+
+/* -- danger -- start */
+.el-tag.el-tag--dark.el-tag--danger {
+  color: var(--tag-dark-danger-color);
+  border-color: var(--tag-dark-danger-border-color);
+  background-color: var(--tag-dark-danger-bg);
+
+  i[class^=el-tag] {
+    color: var(--tag-dark-danger-color);
+    background-color: var(--tag-dark-danger-icon-bg);
+
+    &:hover {
+      color: var(--tag-dark-danger-icon-color-hover);
+      background-color: var(--tag-dark-danger-icon-bg-hover);
+    }
+  }
+}
+
+/* -- danger -- end */
+
+/* ----- dark end ------- */
+
+/* 圆角标签 round */
+.el-tag[round] {
+  border-radius: var(--tag-round-border-radius);
+  padding: var(--tag-round-l-padding);
+
+  &.el-tag--medium {
+    padding: var(--tag-round-m-padding);
+  }
+
+  &.el-tag--small {
+    padding: var(--tag-round-s-padding);
+  }
+
+  &.el-tag--mini {
+    padding: var(--tag-round-xs-padding);
+  }
+}
+
+/* -------- 圆润标签 mellow start --------- */
+/* 普通 常规 normal */
+.el-tag[mellow=normal] {
+  color: var(--tag-mellow-normal-color);
+  border-color: var(--tag-mellow-normal-border-color);
+  background-color: var(--tag-mellow-normal-bg);
+}
+
+/* 信息 info */
+.el-tag[mellow=info] {
+  color: var(--tag-mellow-info-color);
+  border-color: var(--tag-mellow-info-border-color);
+  background-color: var(--tag-mellow-info-bg);
+}
+
+/* 重要 important */
+.el-tag[mellow=important] {
+  color: var(--tag-mellow-important-color);
+  border-color: var(--tag-mellow-important-border-color);
+  background-color: var(--tag-mellow-important-bg);
+}
+
+/* 进行 doing */
+.el-tag[mellow=doing] {
+  color: var(--tag-mellow-doing-color);
+  border-color: var(--tag-mellow-doing-border-color);
+  background-color: var(--tag-mellow-doing-bg);
+}
+
+/* 成功 success */
+.el-tag[mellow=success] {
+  color: var(--tag-mellow-success-color);
+  border-color: var(--tag-mellow-success-border-color);
+  background-color: var(--tag-mellow-success-bg);
+}
+
+/* 警告 warning */
+.el-tag[mellow=warning] {
+  color: var(--tag-mellow-warning-color);
+  border-color: var(--tag-mellow-warning-border-color);
+  background-color: var(--tag-mellow-warning-bg);
+}
+
+/* 危险 danger */
+.el-tag[mellow=danger] {
+  color: var(--tag-mellow-danger-color);
+  border-color: var(--tag-mellow-danger-border-color);
+  background-color: var(--tag-mellow-danger-bg);
+}
+
+/* 停止 stop */
+.el-tag[mellow=stop] {
+  color: var(--tag-mellow-stop-color);
+  border-color: var(--tag-mellow-stop-border-color);
+  background-color: var(--tag-mellow-stop-bg);
+}
+
+/* 严重 serious */
+.el-tag[mellow=serious] {
+  color: var(--tag-mellow-serious-color);
+  border-color: var(--tag-mellow-serious-border-color);
+  background-color: var(--tag-mellow-serious-bg);
+}
+
+/* 提示 tips */
+.el-tag[mellow=tips] {
+  color: var(--tag-mellow-tips-color);
+  border-color: var(--tag-mellow-tips-border-color);
+  background-color: var(--tag-mellow-tips-bg);
+}
+
+/* 通知 notice */
+.el-tag[mellow=notice] {
+  color: var(--tag-mellow-notice-color);
+  border-color: var(--tag-mellow-notice-border-color);
+  background-color: var(--tag-mellow-notice-bg);
+}
+
+/* 酱紫 dark-purple */
+.el-tag[mellow=dark-purple] {
+  color: var(--tag-mellow-dark-purple-color);
+  border-color: var(--tag-mellow-dark-purple-border-color);
+  background-color: var(--tag-mellow-dark-purple-bg);
+}
+
+/* 靛蓝 indigo */
+.el-tag[mellow=indigo] {
+  color: var(--tag-mellow-indigo-color);
+  border-color: var(--tag-mellow-indigo-border-color);
+  background-color: var(--tag-mellow-indigo-bg);
+}
+
+/* 宝蓝 royal */
+.el-tag[mellow=royal] {
+  color: var(--tag-mellow-royal-color);
+  border-color: var(--tag-mellow-royal-border-color);
+  background-color: var(--tag-mellow-royal-bg);
+}
+
+/* 会员 member */
+.el-tag[mellow=member] {
+  color: var(--tag-mellow-member-color);
+  border-color: var(--tag-mellow-member-border-color);
+  background-color: var(--tag-mellow-member-bg);
+}
+
+/* 明青 cyan */
+.el-tag[mellow=cyan] {
+  color: var(--tag-mellow-cyan-color);
+  border-color: var(--tag-mellow-cyan-border-color);
+  background-color: var(--tag-mellow-cyan-bg);
+}
+
+/* 青柠 lime */
+.el-tag[mellow=lime] {
+  color: var(--tag-mellow-lime-color);
+  border-color: var(--tag-mellow-lime-border-color);
+  background-color: var(--tag-mellow-lime-bg);
+}
+
+/* 灰鲸 gray-whale */
+.el-tag[mellow=gray-whale] {
+  color: var(--tag-mellow-gray-whale-color);
+  border-color: var(--tag-mellow-gray-whale-border-color);
+  background-color: var(--tag-mellow-gray-whale-bg);
+}
+
+/* -------- 圆润标签 mellow end --------- */
+
+/* 禁用标签 disabled */
+.el-tag[disabled],
+.el-tag.el-tag--dark[disabled] {
+  color: var(--tag-plain-disabled-color);
+  border-color: var(--tag-plain-disabled-border-color);
+  background-color: var(--tag-plain-disabled-bg);
+  cursor: not-allowed;
+
+  i[class^=el-tag] {
+    color: var(--tag-plain-disabled-icon-color);
+    background-color: var(--tag-plain-disabled-icon-bg);
+
+    &:hover {
+      color: var(--tag-plain-disabled-icon-color-hover);
+      background-color: var(--tag-plain-disabled-icon-bg-hover);
+      cursor: not-allowed;
+    }
+  }
+}
+
+/* Checkbox【多选框按钮组】、Radio【单选框按钮组】
+------------------------------------------------------------------ */
+.el-checkbox-group,
+.el-radio-group {
+
+  .el-checkbox-button,
+  .el-radio-button {
+
+    .el-checkbox-button__inner,
+    .el-radio-button__inner {
+      color: var(--button-default-color);
+      background-color: var(--button-default-bg);
+      border-color: var(--button-default-border-color);
+      padding: var(--button-l-padding);
+      font-size: var(--font-size-4);
+      line-height: 1;
+    }
+  }
+
+  .el-checkbox-button.is-active,
+  .el-radio-button.is-active {
+
+    .el-checkbox-button__inner,
+    .el-radio-button__inner {
+      color: var(--button-default-color-hover);
+      border-color: var(--button-default-border-color-hover);
+      background-color: var(--button-default-bg-hover);
+      box-shadow: -1px 0 0 0 var(--button-default-bg-hover);
+    }
+  }
+
+  .el-checkbox-button.is-checked,
+  .el-radio-button.is-checked {
+
+    .el-checkbox-button__inner,
+    .el-radio-button__inner {
+      color: var(--button-default-color-hover);
+      border-color: var(--button-default-border-color-hover);
+      background-color: var(--button-default-bg-hover);
+      box-shadow: -1px 0 0 0 var(--button-default-bg-hover);
+    }
+  }
+
+  .el-checkbox-button.is-disabled,
+  .el-radio-button.is-disabled {
+
+    .el-checkbox-button__inner,
+    .el-radio-button__inner {
+      color: var(--button-default-color-disabled);
+      background-color: var(--button-default-bg-disabled);
+      border-color: var(--button-default-border-color-disabled);
+    }
+  }
+
+  .el-checkbox-button--medium,
+  .el-radio-button--medium {
+
+    .el-checkbox-button__inner,
+    .el-radio-button__inner {
+      padding: var(--button-m-padding);
+      font-size: var(--font-size-4);
+      line-height: 1;
+    }
+  }
+
+  .el-checkbox-button--small,
+  .el-radio-button--small {
+
+    .el-checkbox-button__inner,
+    .el-radio-button__inner {
+      padding: var(--button-s-padding);
+      font-size: var(--font-size-default);
+      line-height: 1;
+    }
+  }
+
+  .el-checkbox-button--mini,
+  .el-radio-button--mini {
+
+    .el-checkbox-button__inner,
+    .el-radio-button__inner {
+      padding: var(--button-xs-padding);
+      font-size: var(--font-size-default);
+      line-height: 1;
+    }
+  }
+}
+
+
+/* Select【选择器】
+------------------------------------------------------------------ */
+.el-select[stretch] {
+  width: 100%;
+
+  /* 多选情况下，长度被撑开处理 */
+  .el-select__tags-text {
+    max-width: 100px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+}
+
+.el-select {
+  .el-popper {
+    z-index: var(--zindex-base) !important;
+  }
+  .el-input__prefix {
+    color: var(--form-detailed-item-label-color);
+  }
+
+  /* 多选下拉框中独有的 el-tag 类名 */
+  .el-tag {
+    border-radius: 16px;
+
+    .el-tag__close {
+      color: var(--button-plain-info-color);
+      background-color: var(--button-plain-info-bg);
+      border-color: var(--button-plain-info-border-color);
+    }
+  }
+
+  /* 解决下拉框有filterable属性时问题 */
+  .el-input .el-input__inner {
+    height: var(--input-height-l) !important;
+  }
+
+  .el-input.el-input--medium .el-input__inner {
+    height: var(--input-height-m) !important;
+  }
+
+  .el-input.el-input--small .el-input__inner {
+    height: var(--input-height-s) !important;
+  }
+
+  .el-input.el-input--mini .el-input__inner {
+    height: var(--input-height-xs) !important;
+  }
+}
+
+.el-select-dropdown {
+  background-color: var(--select-dropdown-bg);
+  box-shadow: var(--select-dropdown-shadow);
+  border: var(--select-dropdown-border);
+  margin: 0 !important;
+  max-width: 0;
+
+  .el-select-dropdown__wrap {
+    .el-select-dropdown__list {
+      .el-select-group__wrap {
+        .el-select-group__title {
+          color: var(--color-font-1);
+          padding-left: 16px;
+        }
+      }
+      .el-select-dropdown__item {
+        overflow: visible;
+        color: var(--select-dropdown-item-color);
+        padding: var(--select-dropdown-item-padding);
+        font-size: var(--select-dropdown-item-font-size);
+      }
+
+      .el-select-dropdown__item.hover {
+        background-color: var(--select-dropdown-item-bg-hover);
+      }
+
+      .el-select-dropdown__item.selected {
+        color: var(--select-dropdown-item-color-actived);
+      }
+
+      .el-select-dropdown__item.is-disabled {
+        color: var(--select-dropdown-item-color-disabled);
+      }
+    }
+  }
+
+  .popper__arrow {
+    display: none;
+  }
+}
+
+/* Dropdown【下拉菜单】
+------------------------------------------------------------------ */
+.el-dropdown {
+  .el-button--primary[disabled="disabled"] {
+    color: var(--button-color);
+    border-color: transparent !important;
+    background: linear-gradient(270deg, var(--blue-6-a50) 0%, var(--blue-5-a50) 100%) !important;
+
+    .idss-svg-icon {
+      fill: var(--button-color) !important;
+    }
+
+    i[class^=el-tag] {
+      color: var(--button-color);
+      background-color: var(--button-color);
+    }
+  }
+}
+
+.el-dropdown-menu {
+  background-color: var(--select-dropdown-bg);
+  box-shadow: var(--select-dropdown-shadow);
+  border: var(--select-dropdown-border);
+
+  .el-dropdown-menu__item {
+    color: var(--select-dropdown-item-color);
+    padding: var(--select-dropdown-item-padding);
+    font-size: var(--select-dropdown-item-font-size);
+  }
+
+  .el-dropdown-menu__item:hover,
+  .el-dropdown-menu__item:focus {
+    background-color: var(--select-dropdown-item-bg-hover);
+  }
+
+  .el-dropdown-menu__item.is-disabled {
+    color: var(--select-dropdown-item-color-disabled);
+  }
+
+  .el-dropdown-menu__item--divided:before {
+    margin: 0px -16px;
+  }
+}
+
+
+/* Table【表格】
+------------------------------------------------------------------ */
+.el-table {
+  .el-table__column-resize-proxy {
+    border-left: 1px dotted var(--blue-5);
+  }
+
+  th,
+  td {
+    padding: var(--table-row-padding) !important;
+  }
+
+  &__header-wrapper,
+  &__fixed-header-wrapper {
+    thead {
+      color: var(--table-header-color);
+      font-size: var(--table-header-font-size);
+
+      tr {
+        font-weight: 500;
+
+        th {
+
+          /* background-color: var(--table-header-bg) !important;; */
+          /* line-height: 20px; */
+          .caret-wrapper {
+            height: 14px;
+
+            .ascending {
+              border-bottom-color: var(--button-icon-sort-color);
+              top: -5px;
+            }
+
+            .descending {
+              bottom: -4px;
+              border-top-color: var(--button-icon-sort-color);
+            }
+          }
+
+          .el-table__column-filter-trigger {
+            line-height: 23px;
+          }
+        }
+
+        th.noclick {
+          /* border-right:1px dotted var(--blue-5) !important; */
+        }
+
+        th,
+        th.el-table__cell {
+          background-color: var(--table-header-bg);
+        }
+
+        th:hover {
+          background-color: var(--color-bg-1)
+        }
+
+        th.is-leaf {
+          border-top: 1px solid var(--color-line-4);
+          border-bottom: 1px solid var(--color-line-4) !important;
+        }
+
+        .ascending .sort-caret.ascending {
+          border-bottom-color: var(--button-icon-sort-color-actived);
+        }
+
+        .descending .sort-caret.descending {
+          border-top-color: var(--button-icon-sort-color-actived)
+        }
+      }
+    }
+
+  }
+
+  &__body-wrapper,
+  &__fixed-body-wrapper {
+    tbody {
+      color: var(--table-body-color);
+
+      .el-table__row {
+        background-color: var(--table-body-bg);
+        font-size: var(--table-body-font-size);
+
+        td {
+          /* padding: var(--table-body-row-padding); */
+          border-bottom: 1px solid var(--color-line-4);
+        }
+
+        td:last-child .cell {
+          padding-right: 20px;
+        }
+      }
+
+      .el-table__row--striped {
+        background-color: var(--table-body-row-bg-stripe);
+
+        td {
+          background: var(--table-body-row-bg-stripe);
+        }
+      }
+
+      .el-table__row--striped.hover-row,
+      .el-table__row.hover-row {
+        td {
+          background-color: var(--table-body-row-bg-hover)
+        }
+      }
+    }
+  }
+
+  & th>.cell {
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+    font-weight: 500;
+  }
+
+  & .cell,
+  &.el-table--border td:first-child .cell,
+  &.el-table--border th:first-child .cell {
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+  }
+
+  &.el-table--border td,
+  &.el-table--border th,
+  .el-table__body-wrapper .el-table--border.is-scrolling-left~.el-table__fixed {
+    border-right: 1px solid transparent;
+  }
+
+  &.el-table--border {
+    border: 0px;
+    border-left: 1px solid var(--color-line-4);
+    /* border-right: 1px solid var(--color-line-4); */
+  }
+
+  &.el-table--border::after,
+  &.el-table--group::after,
+  &.el-table::before {
+    background-color: var(--color-line-4);
+    z-index: 3;
+  }
+
+  &.el-table--border th.gutter:last-of-type {
+    border-bottom-color: var(--color-line-4);
+    border-top: 1px solid var(--color-line-4);
+  }
+
+  .el-table__fixed-right-patch {
+    top: 0px;
+    border-top: 1px solid var(--color-line-4);
+    border-left: 1px solid var(--color-line-4);
+    background-color: var(--table-header-bg-fixed);
+  }
+
+  /*
+  * @FIXME：当前方案并不完美，如果第一列宽度本身就不大，会出现省略号
+  * 当没有 checkbox 时，表格第一列有 32px 的 padding-left
+  */
+  &>.el-table__body-wrapper,
+  &>.el-table__header-wrapper {
+
+    th,
+    td {
+      &:first-child:not([class~=el-table-column--selection]) .cell {
+        padding-left: 32px !important;
+      }
+    }
+  }
+}
+
+/* 表格单选高亮样式覆盖，第一列前面会出现对号 */
+.table-single-select {
+
+  .el-table__header-wrapper,
+  .el-table__body-wrapper {
+
+    /* 高亮时 表格第一列前面会出现对号，宽度为 16，所以这里第一列的padding-left 32px 变为 46px */
+    th,
+    td {
+      &:first-child:not([class~=el-table-column--selection]) .cell {
+        padding-left: 46px !important;
+      }
+    }
+  }
+
+  .el-table__body-wrapper {
+
+    /* 利用第一列的元素增加伪元素，然后绝对定位 */
+    & tbody>tr.current-row td:first-child .cell {
+      position: relative;
+
+      &::after {
+        font-family: element-icons !important;
+        speak: none;
+        font-style: normal;
+        font-weight: bold;
+        font-feature-settings: normal;
+        font-variant: normal;
+        text-transform: none;
+        /* line-height: 1; */
+        vertical-align: baseline;
+        display: inline-block;
+        /* element icon：el-icon-check */
+        content: "\e6da";
+        color: var(--blue-6);
+        font-size: 16px;
+        position: absolute;
+        left: 16px;
+        top: 0;
+      }
+    }
+
+    & .current-row {
+      /* 高亮时的阴影效果 */
+      box-shadow: 0 0 10px 0 var(--guan-gray-4);
+      transform: translateZ(10px);
+      transition: all 0.5s;
+
+      & td.el-table__cell {
+        background-color: unset;
+      }
+
+      /* 高亮是 对号 没有透明度 */
+      & .current-row-check {
+        opacity: 1;
+      }
+    }
+  }
+}
+
+
+/* Pagination【分页】
+------------------------------------------------------------------ */
+.el-pagination.el-pagination--small {
+  padding: var(--pagination-padding);
+  color: var(--pagination-color);
+
+  .el-pagination__total,
+  .el-pagination__sizes,
+  .el-pager,
+  .el-pagination__jump {
+    color: var(--pagination-color);
+    font-size: var(--pagination-font-size);
+  }
+
+  button,
+  span:not([class*=suffix]) {
+    font-size: var(--pagination-font-size);
+    height: var(--pagination-height-small);
+    line-height: var(--pagination-height-small);
+  }
+
+  .el-pager {
+    li {
+      height: var(--pagination-height-small);
+      line-height: var(--pagination-height-small);
+      width: 32px;
+      margin: 0 2px;
+    }
+
+    li:hover {
+      color: var(--pagination-pager-color-hover);
+      background-color: var(--pagination-pager-bg-hover);
+    }
+
+    li.active {
+      color: var(--pagination-pager-color-actived);
+      background-color: var(--pagination-pager-bg-actived);
+    }
+  }
+
+  .btn-next,
+  .btn-prev {
+    height: var(--pagination-height-small);
+    line-height: var(--pagination-height-small);
+    color: var(--pagination-button-color);
+  }
+
+  .btn-next:not([disabled]):hover,
+  .btn-prev:not([disabled]):hover {
+    color: var(--pagination-button-color-hover);
+  }
+
+  button:disabled {
+    color: var(--pagination-button-color-disabled);
+  }
+
+  .el-pagination__sizes {
+    .el-select {
+      .el-input {
+        .el-input__inner {
+          border-radius: var(--input-border-corner);
+          height: var(--pagination-height-small) !important;
+          line-height: var(--pagination-height-small);
+          font-size: var(--pagination-font-size);
+        }
+      }
+    }
+  }
+}
+
+.el-pagination[size="medium"] {
+  padding: var(--pagination-padding);
+  color: var(--pagination-color);
+
+  /* background-color: var(--color-bg-7); */
+  .el-pagination__total,
+  .el-pagination__sizes,
+  .el-pager,
+  .el-pagination__jump {
+    color: var(--pagination-color);
+    font-size: var(--pagination-font-size);
+  }
+
+  button,
+  span:not([class*=suffix]) {
+    font-size: var(--pagination-font-size);
+    height: var(--pagination-height-medium);
+    line-height: var(--pagination-height-medium);
+  }
+
+  .el-pagination__sizes .el-select .el-input {
+    margin: 0;
+    background-color: var(--color-bg-7);
+  }
+
+  .el-pagination__sizes .el-select .el-input .el-input__suffix {
+    .el-icon-arrow-up:before {
+      content: "\e78f";
+    }
+  }
+
+  .el-pagination__total {
+    background-color: var(--color-bg-7);
+    margin-right: 0;
+    padding-left: 12px;
+    padding-right: 8px;
+
+    .total_value {
+      min-width: 24px;
+      text-align: center;
+      color: var(--pagination-pager-color-actived);
+    }
+  }
+
+  .el-pager {
+    li {
+      height: var(--pagination-height-medium);
+      line-height: var(--pagination-height-medium);
+      margin: 0;
+      background-color: var(--color-bg-7);
+      border: 1px solid transparent;
+      min-width: var(--pagination-height-medium);
+      font-weight: 500;
+    }
+
+    li.active,
+    li:hover {
+      color: var(--pagination-pager-color-actived);
+      border: 1px solid var(--blue-4);
+      border-radius: var(--corner-m)
+    }
+  }
+
+  .btn-next,
+  .btn-prev {
+    height: var(--pagination-height-medium);
+    line-height: var(--pagination-height-medium);
+    color: var(--pagination-button-color);
+    background-color: var(--color-bg-7);
+  }
+
+  .btn-prev {
+    margin-left: 8px;
+  }
+
+  .btn-next:not([disabled]):hover,
+  .btn-prev:not([disabled]):hover {
+    color: var(--pagination-button-color-hover);
+  }
+
+  button:disabled {
+    color: var(--pagination-button-color-disabled);
+  }
+
+  .el-pagination__sizes {
+    margin: 0;
+
+    .el-select {
+      .el-input {
+        .el-input__inner {
+          border-radius: var(--input-border-corner);
+          /* height: var(--pagination-height-medium)!important;
+          line-height: var(--pagination-height-medium); */
+          font-size: var(--pagination-font-size);
+          border-color: transparent;
+          background-color: transparent;
+        }
+
+        .el-input__inner:hover {
+          border-color: var(--blue-4);
+          background-color: var(--color-bg-5);
+        }
+      }
+    }
+  }
+}
+
+
+/* Tree【树形控件】
+------------------------------------------------------------------ */
+.el-tree {
+  .el-tree-node {
+    >.el-tree-node__content {
+      .el-tree-node__label {
+        color: var(--tree-lable-root-color);
+        font-size: var(--tree-lable-root-font-size);
+      }
+
+      .el-checkbox[aria-checked='mixed']+.el-tree-node__label {
+        font-weight: bold;
+      }
+
+      .el-checkbox.is-checked+.el-tree-node__label {
+        font-weight: bold;
+      }
+    }
+
+    >.el-tree-node__children {
+      .el-tree-node {
+        .el-tree-node__content {
+          .el-tree-node__label {
+            color: var(--tree-lable-children-color);
+            font-size: var(--tree-lable-children-font-size);
+          }
+        }
+      }
+    }
+  }
+}
+
+/* Tree【树形控件】，配置只可选叶子节点的样式  */
+.idss-select-tree-leaf-only {
+  .el-tree-node__content {
+    .el-tree-node__expand-icon:not(.is-leaf) {
+      & + .el-checkbox.is-disabled {
+        display: none;
+      }
+      & ~ .custom-is-disabled {
+        color: inherit!important;
+      }
+    }
+  }
+}
+
+/* Tabs【标签页】
+------------------------------------------------------------------ */
+/* 默认 Tab */
+.el-tabs {
+  .el-tabs__header {
+    margin: var(--tab-header-margin);
+
+    .el-tabs__nav-wrap {
+      .el-tabs__nav-scroll {
+        .el-tabs__nav {
+          .el-tabs__active-bar {
+            height: 2px;
+            background-color: var(--guan-gray-10);
+          }
+
+          .el-tabs__item {
+            font-size: var(--tab-font-size);
+            color: var(--tab-item-color);
+            padding: 0 var(--idss-padding-small);
+            height: var(--tab-item-default-height);
+            line-height: var(--tab-item-default-height);
+          }
+
+          .el-tabs__item.is-active,
+          .el-tabs__item:hover {
+            color: var(--tab-item-color-actived);
+            font-weight: bold;
+          }
+
+          .el-tabs__item.is-active,
+          .el-tabs__item:hover {
+            color: var(--tab-item-color-actived);
+            font-weight: bold;
+          }
+
+          /* .el-tabs__item.is-disabled { 和ui确认框架里不会出现该属性故这里不特殊设置样式
+            color: var(--tab-item-color-disabled);
+          } */
+        }
+      }
+    }
+
+    .el-tabs__nav-wrap::after {
+      background-color: var(--color-line-3);
+      height: 1px;
+    }
+  }
+
+  &.el-tabs--top,
+  &.el-tabs--bottom {
+    .el-tabs__nav-wrap {
+      padding-left: 4px;
+    }
+
+    .el-tabs__active-bar:before,
+    .el-tabs__active-bar::after {
+      content: '';
+      position: absolute;
+      width: 12px;
+      height: 2px;
+      background: var(--tab-item-color-actived);
+    }
+
+    .el-tabs__active-bar:before {
+      left: -12px;
+    }
+
+    .el-tabs__active-bar::after {
+      right: -12px;
+    }
+  }
+}
+
+.el-tabs[custom] {
+  .el-tabs__header {
+    border-bottom: 1px solid var(--guan-gray-2);
+    padding-left: 15px;
+  }
+}
+
+/* 卡片类型 Tab type="card"*/
+.el-tabs.el-tabs--card {
+  box-shadow: none;
+  border-color: var(--tab-card-border-line-color);
+
+  .el-tabs__header {
+    margin: 0;
+    border: none;
+
+    .el-tabs__nav-wrap {
+      padding-left: 0px;
+
+      .el-tabs__nav-scroll {
+        .el-tabs__nav {
+          border: none;
+
+          .el-tabs__item {
+            padding: 0 var(--idss-padding-large);
+            height: var(--tab-card-height);
+            line-height: var(--tab-card-height);
+            margin-right: var(--tab-card-item-line-margin-right);
+            border: 1px solid var(--tab-card-border-line-color);
+            background-color: var(--tab-card-item-bg-color);
+            border-radius: var(--tab-card-item-border-radius) var(--tab-card-item-border-radius) 0 0;
+          }
+
+          .el-tabs__item.is-active {
+            border-bottom: 1px solid var(--tab-card-item-active-bg-color);
+            background-color: var(--tab-card-item-active-bg-color);
+          }
+
+          .el-tabs__item.is-active,
+          .el-tabs__item:hover {
+            color: var(--color-font-6);
+            font-weight: bold;
+          }
+        }
+      }
+    }
+  }
+
+  .el-tabs__content {
+    border: 1px solid var(--tab-card-border-line-color);
+    padding: var(--tab-card-header-padding);
+    background-color: var(--tab-card-item-active-bg-color);
+  }
+}
+
+
+/* Loading【加载】
+------------------------------------------------------------------ */
+.el-loading-mask {
+  z-index: var(--zindex-loading);
+
+  .el-loading-spinner {
+    .el-icon-loading {
+      font-size: 20px;
+      color: var(--guan-gray-7)
+    }
+
+    .el-loading-text {
+      margin-top: 16px;
+      font-size: 12px;
+      color: var(--guan-gray-7)
+    }
+  }
+}
+
+.el-loading-page {
+  .el-loading-spinner {
+    .el-icon-loading {
+      font-size: 20px;
+      color: var(--blue-6)
+    }
+
+    .el-loading-text {
+      margin-top: 16px;
+      font-size: 14px;
+      color: var(--blue-6)
+    }
+  }
+}
+
+
+/* 以下需要 @fixme
+------------------------------------------------------------------ */
+/* Steps【步骤条】
+------------------------------------------------------------------ */
+.el-step__icon {
+  z-index: 0;
+}
+
+
+/* Date【时间选择器】
+------------------------------------------------------------------ */
+.el-date-editor {
+  height: var(--input-height-l) !important;
+
+  .el-input__inner {
+    line-height: var(--input-height-l);
+    height: var(--input-height-l);
+  }
+
+  .el-input__prefix,
+  .el-input__suffix {
+    .el-input__icon {
+      line-height: var(--input-height-l);
+      height: var(--input-height-l);
+    }
+  }
+  .el-input__icon,
+  .el-range-separator {
+    line-height: var(--input-height-l);
+    height: var(--input-height-l);
+  }
+}
+
+.el-date-editor[medium] {
+  height: var(--input-height-m) !important;
+
+  .el-input__inner {
+    line-height: var(--input-height-m);
+    height: var(--input-height-m);
+  }
+
+  .el-input__prefix,
+  .el-input__suffix {
+    .el-input__icon {
+      line-height: var(--input-height-m);
+      height: var(--input-height-m);
+    }
+  }
+
+  .el-input__icon,
+  .el-range-separator {
+    line-height: var(--input-height-m);
+    height: var(--input-height-m);
+  }
+
+  .el-range-separator,
+  .el-range-input {
+    font-size: var(--font-size-6);
+  }
+}
+
+.el-date-editor[small] {
+  height: var(--input-height-s) !important;
+
+  .el-input__inner {
+    line-height: var(--input-height-s);
+    height: var(--input-height-s);
+  }
+
+  .el-input__prefix,
+  .el-input__suffix {
+    .el-input__icon {
+      line-height: var(--input-height-s);
+      height: var(--input-height-s);
+    }
+  }
+
+  .el-input__icon,
+  .el-range-separator {
+    line-height: var(--input-height-s);
+    height: var(--input-height-s);
+  }
+
+  .el-range-separator,
+  .el-range-input {
+    font-size: var(--font-size-6);
+  }
+}
+
+.el-date-editor[mini] {
+  height: var(--input-height-xs) !important;
+
+  .el-input__inner {
+    line-height: var(--input-height-xs);
+    height: var(--input-height-xs);
+  }
+
+  .el-input__prefix,
+  .el-input__suffix {
+    .el-input__icon {
+      line-height: var(--input-height-xs);
+      height: var(--input-height-xs);
+    }
+  }
+
+  .el-input__icon,
+  .el-range-separator {
+    line-height: var(--input-height-xs);
+    height: var(--input-height-xs);
+  }
+
+  .el-range-separator,
+  .el-range-input {
+    font-size: var(--font-size-6);
+  }
+}
+
+.el-date-editor[stretch] {
+  width: 100%;
+}
+
+
+
+.el-date-editor[custom] {
+  padding: 3px 15px;
+
+  .el-range-separator {
+    padding: 0px 2px;
+  }
+}
+
+
+/* Progress
+------------------------------------------------------------------ */
+.el-progress--circle[custom] {
+  .el-progress__text {
+    top: 40%;
+    font-size: var(--font-size-4) !important;
+  }
+}
+
+/* Progress
+------------------------------------------------------------------ */
+.el-divider {
+  background-color: var(--divider-bg-color);
+
+  &--horizontal {
+    margin: 0 0 20px;
+  }
+}
+
+/* confirm 强提醒弹窗 -- start */
+/* Message Box 【弹框】
+------------------------------------------------------------------ */
+.el-message-box {
+  width: 320px;
+
+  &__title {
+    color: var(--color-font-1) !important;
+    font-size: var(--font-size-4) !important;
+    font-weight: bold;
+  }
+
+  &__headerbtn {
+    font-size: var(--font-size-6) !important;
+    line-height: 1;
+  }
+
+  &__content {
+    color: var(--color-font-2) !important;
+    font-size: var(--font-size-6, 12px) !important;
+  }
+  &__status {
+    top: 0;
+    transform: none;
+    font-size: var(--font-size-1, 20px)!important;
+  }
+  &__status + &__message {
+    padding-left: 28px;
+  }
+  &__message p {
+    line-height: 20px;
+  }
+
+  &__btns {
+    display: flex;
+    align-items: center;
+    flex-direction: row-reverse;
+
+    .el-button {
+      padding: 6px 12px;
+      font-size: var(--font-size-4);
+      height: var(--input-height-m);
+    }
+
+    .el-button:nth-of-type(1) {
+      margin-left: var(--idss-margin-small);
+    }
+
+    .el-button:nth-of-type(2) {
+      margin-left: 0;
+    }
+  }
+}
+
+/* confirm 强提醒弹窗 -- end */
+
+/* el-message 
+------------------------------------------------------------------ */
+.el-message {
+  &.el-message--success {
+
+    .el-message__content,
+    .el-icon-success {
+      color: var(--green-6);
+    }
+  }
+
+  &.el-message--warning {
+
+    .el-message__content,
+    .el-icon-success {
+      color: var(--orange-6);
+    }
+  }
+
+  &.el-message--info {
+
+    .el-message__content,
+    .el-icon-success {
+      color: var(--guan-gray-8);
+    }
+  }
+
+  &.el-message--error {
+
+    .el-message__content,
+    .el-icon-success {
+      color: var(--red-6);
+    }
+  }
+}
+
+/* Slider 滑块
+------------------------------------------------------------------ */
+.el-slider {
+  .el-slider__runway {
+    background-color: var(--color-bg-2);
+  }
+
+  .el-slider__bar {
+    background: linear-gradient(90deg, var(--blue-5), var(--blue-6));
+
+  }
+
+  .el-slider__button-wrapper {
+    .el-slider__button {
+      width: 20px;
+      height: 20px;
+      border: 4px solid var(--blue-6);
+    }
+  }
+}
+
+/* el-upload 拖拽上传
+------------------------------------------------------------------ */
+.am-upload {
+  .el-upload {
+    width: 100%;
+
+    .el-upload-dragger {
+      width: 100%;
+    }
+
+    .el-icon-upload {
+      font-size: 48px;
+    }
+
+    .el-upload__text {
+      font-size: var(--font-size-6);
+      color: var(--color-font-3);
+
+      em {
+        color: var(--blue-5)
+      }
+    }
+  }
+
+  .el-upload__tip {
+    color: var(--color-font-3);
+  }
+
+  .el-upload-list .el-upload-list__item {
+    .el-upload-list__item-name {
+      font-size: var(--font-size-6);
+      color: var(--color-font-1);
+    }
+
+    .el-icon-upload-success {
+      color: var(--green-5)
+    }
+
+    .el-progress {
+      .el-progress-bar__inner {
+        background-color: var(--blue-5)
+      }
+    }
+
+    .el-progress__text {
+      font-size: var(--font-size-6) !important;
+      color: var(--color-font-1);
+    }
+  }
+}
+
+/* el-link 拖拽上传
+------------------------------------------------------------------ */
+.el-link.el-link--default:hover {
+  color: var(--blue-6);
+}
+
+.el-link.is-underline:hover:after {
+  border-bottom: 1px solid var(--blue-6);
+}
