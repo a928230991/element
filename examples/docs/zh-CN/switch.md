@@ -112,6 +112,108 @@
 ```
 :::
 
+### ueba
+
+
+:::demo 设置`size`属性，`size="mini"`,   设置`type`属性，`type="green"`
+
+```html
+<el-row>
+  <el-col :span="24">
+    <el-switch
+      v-model="switch1"
+      >
+    </el-switch>
+    <el-switch
+      v-model="switch2"
+      size="mini"
+      >
+    </el-switch>
+    <el-switch
+      v-model="switch3"
+      type="green"
+      >
+    </el-switch>
+    <el-switch
+      v-model="switch4"
+      type="green"
+      size="mini"
+      >
+    </el-switch>
+    <el-switch
+      v-model="switch5"
+      >
+    </el-switch>
+    <el-switch
+      v-model="switch6"
+      size="mini"
+      >
+    </el-switch>
+  </el-col>
+  <el-col :span="24">
+    <el-switch
+      v-model="switch7"
+      disabled
+      >
+    </el-switch>
+    <el-switch
+      v-model="switch8"
+      size="mini"
+      disabled
+      >
+    </el-switch>
+    <el-switch
+      v-model="switch9"
+      type="green"
+      disabled
+      >
+    </el-switch>
+    <el-switch
+      v-model="switch10"
+      type="green"
+      size="mini"
+      disabled
+      >
+    </el-switch>
+    <el-switch
+      v-model="switch11"
+      type="green"
+      disabled
+      >
+    </el-switch>
+    <el-switch
+      v-model="switch12"
+      type="green"
+      size="mini"
+      disabled
+      >
+    </el-switch>
+  </el-col>
+</el-row>
+
+
+<script>
+  export default {
+    data() {
+      return {
+        switch1: true,
+        switch2: true,
+        switch3: true,
+        switch4: true,
+        switch5: false,
+        switch6: false,
+        switch7: true,
+        switch8: true,
+        switch9: true,
+        switch10: true,
+        switch11: false,
+        switch12: false,
+      }
+    }
+  };
+</script>
+```
+:::
 
 ### Attributes
 

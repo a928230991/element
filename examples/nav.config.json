@@ -41,6 +41,43 @@
       "name": "组件",
       "groups": [
         {
+          "groupName": "态势",
+          "list": [
+            {
+              "path": "/link",
+              "title": "Link 文字链接"
+            },
+            {
+              "path": "/button-demo",
+              "title": "按钮"
+            },
+            {
+              "path": "/tag-demo",
+              "title": "Tag 标签"
+            },
+            {
+              "path": "/ueba-form",
+              "title": "Form 表单"
+            },
+            {
+              "path": "/message-box-ueba",
+              "title": "message"
+            },
+            {
+              "path": "/idss-tabs",
+              "title": "Tabs 标签页"
+            },
+            {
+              "path": "/avatar",
+              "title": "Avatar 头像"
+            },
+            {
+              "path": "/switch",
+              "title": "Switch 开关"
+            }
+          ]
+        },
+        {
           "groupName": "Basic",
           "list": [
             {

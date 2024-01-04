@@ -89,6 +89,9 @@ import Empty from '../packages/empty/index.js';
 import Descriptions from '../packages/descriptions/index.js';
 import DescriptionsItem from '../packages/descriptions-item/index.js';
 import Result from '../packages/result/index.js';
+import IdssTabs from '../packages/idss-tabs/index.js';
+import IdssDrawer from '../packages/idss-drawer/index.js';
+import IdssIconSvg from '../packages/idss-icon-svg/index.js';
 import locale from 'element-ui/src/locale';
 import CollapseTransition from 'element-ui/src/transitions/collapse-transition';
 
@@ -177,6 +180,9 @@ const components = [
   Descriptions,
   DescriptionsItem,
   Result,
+  IdssTabs,
+  IdssDrawer,
+  IdssIconSvg,
   CollapseTransition
 ];
 
@@ -305,5 +311,8 @@ export default {
   Empty,
   Descriptions,
   DescriptionsItem,
-  Result
+  Result,
+  IdssTabs,
+  IdssDrawer,
+  IdssIconSvg
 };

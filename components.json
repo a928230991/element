@@ -87,5 +87,8 @@
   "empty": "./packages/empty/index.js",
   "descriptions": "./packages/descriptions/index.js",
   "descriptions-item": "./packages/descriptions-item/index.js",
-  "result": "./packages/result/index.js"
+  "result": "./packages/result/index.js",
+  "idss-tabs": "./packages/idss-tabs/index.js",
+  "idss-drawer": "./packages/idss-drawer/index.js",
+  "idss-icon-svg": "./packages/idss-icon-svg/index.js"
 }

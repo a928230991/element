@@ -45,6 +45,101 @@
 ```
 :::
 
+
+### UEBA基本用法
+
+通过 `shape` 和 `size` 设置头像的形状和大小。
+
+:::demo
+```html
+<template>
+  <el-row class="demo-avatar demo-basic">
+    <el-col :span="12">
+      <div class="sub-title">circle</div>
+      <div class="demo-basic--circle">
+      
+        <div class="block">
+          <el-avatar
+            size-large
+            icon="el-icon-user-solid"
+            style="margin-right: 20px">
+          </el-avatar>
+        </div>
+        <div class="block">
+           <el-avatar
+            size-medium
+            icon="el-icon-user-solid"
+            style="margin-right: 20px">
+          </el-avatar>
+        </div>
+        <div class="block">
+          <el-avatar
+            size-small
+            icon="el-icon-user-solid"
+            style="margin-right: 20px">
+          </el-avatar>
+        </div>
+        <div class="block">
+           <el-avatar
+            size-mini
+            icon="el-icon-user-solid"
+            style="margin-right: 50px">
+          </el-avatar>
+        </div>
+      </div>
+    </el-col>  
+    <el-col :span="12">
+      <div class="sub-title">shape</div>
+      <div class="demo-basic--circle">
+      
+        <div class="block">
+          <el-avatar
+            shape="square"
+            size-large
+            :src="squareUrl">
+          </el-avatar>
+        </div>
+        <div class="block">
+           <el-avatar
+            shape="square"
+            size-medium
+            :src="squareUrl">
+          </el-avatar>
+        </div>
+        <div class="block">
+          <el-avatar
+            shape="square"
+            size-small
+            :src="squareUrl">
+          </el-avatar>
+        </div>
+        <div class="block">
+           <el-avatar
+            shape="square"
+            size-mini
+            :src="squareUrl">
+          </el-avatar>
+        </div>
+      </div>
+    </el-col>  
+  </el-row>
+</template>
+<script>
+  export default {
+    data () {
+      return {
+        circleUrl: "https://cube.elemecdn.com/3/7c/3ea6beec64369c2642b92c6726f1epng.png",
+        squareUrl: "https://fuss10.elemecdn.com/e/5d/4a731a90594a4af544c0c25941171jpeg.jpeg",
+        sizeList: ["large", "medium", "small"]
+        // https://fuss10.elemecdn.com/e/5d/4a731a90594a4af544c0c25941171jpeg.jpeg
+      }
+    }
+  }
+</script>
+
+```
+:::
+
 ### 展示类型
 
 支持三种类型：图标、图片和字符

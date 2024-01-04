@@ -28,7 +28,7 @@
 
   .el-input__suffix {
     .el-input__suffix-inner {
-      background-color: var(--color-bg-5);
+      // background-color: var(--color-bg-5);
 
       .el-input__icon {
         line-height: var(--input-height-l);
@@ -242,12 +242,12 @@
 
 .el-input-number--small {
 
-  .el-input-number__decrease,
-  .el-input-number__increase {
-    height: var(--input-number-height-s);
-    line-height: var(--input-number-height-s);
-    top: 4px;
-  }
+.el-input-number__decrease,
+.el-input-number__increase {
+height: var(--input-number-height-s);
+line-height: var(--input-number-height-s);
+top: 4px;
+}
 }
 
 .el-input.el-input--mini {
@@ -275,12 +275,12 @@
 
 .el-input-number--mini {
 
-  .el-input-number__decrease,
-  .el-input-number__increase {
-    height: var(--input-number-height-xs);
-    line-height: var(--input-number-height-xs);
-    top: 6px;
-  }
+.el-input-number__decrease,
+.el-input-number__increase {
+height: var(--input-number-height-xs);
+line-height: var(--input-number-height-xs);
+top: 6px;
+}
 }
 
 .el-input.is-disabled {
@@ -365,7 +365,7 @@
 }
 
 .el-checkbox-group, .el-checkbox {
-  font-size: unset;
+  // font-size: unset;
   line-height: var(--input-height-l);
 }
 
@@ -397,8 +397,8 @@
   }
 
   span.el-checkbox__label {
-    line-height: inherit;
-    vertical-align: bottom;
+  // line-height: inherit;
+  //   vertical-align: bottom;
     font-size: var(--font-size-4);
   }
 }
@@ -486,7 +486,7 @@
 
 
 .el-radio-group {
-  font-size: unset;
+  // font-size: unset;
   vertical-align: inherit;
   line-height: var(--input-height-l);
 }
@@ -973,7 +973,7 @@
   }
 
   .el-dialog__body {
-    padding: 0;
+    padding: 18px 20px;
     font-size: var(--font-size-4);
   }
 
@@ -2407,17 +2407,17 @@
   margin-left: 0px;
 }
 
-.el-button.el-button--medium+.el-button.el-button--medium {
-  margin-left: var(--idss-margin-small);
-}
+// .el-button.el-button--medium+.el-button.el-button--medium {
+//   margin-left: var(--idss-margin-small);
+// }
 
-.el-button.el-button--small+.el-button.el-button--small {
-  margin-left: var(--idss-margin-small);
-}
+// .el-button.el-button--small+.el-button.el-button--small {
+//   margin-left: var(--idss-margin-small);
+// }
 
-.el-button.el-button--mini+.el-button.el-button--mini {
-  margin-left: var(--idss-margin-small);
-}
+// .el-button.el-button--mini+.el-button.el-button--mini {
+//   margin-left: var(--idss-margin-small);
+// }
 
 /* 筛选器中-快捷时间-第一个button的margin-left未生效 */
 .idss_time_select_quick_box {
@@ -2675,6 +2675,11 @@
       height: var(--icon-size-xxs);
       vertical-align: top;
     }
+
+    & i[class^="el-icon-"] {
+      font-size: 8px;
+      vertical-align: top;
+    }
   }
 }
 
@@ -2696,12 +2701,20 @@
     fill: var(--color-font-2);
     margin-right: var(--button-icon-svg-margin);
   }
+  i[class^="el-icon-"]{
+    color: var(--color-font-2);
+    font-size: var(--input-height-l);
+    margin-right: var(--button-icon-svg-margin);
+  }
 
   &:hover {
     color: var(--color-font-default);
 
     svg.idss-svg-icon {
       fill: var(--color-font-default);
+    }
+    i[class^="el-icon-"]{
+      color: var(--color-font-default);;
     }
   }
 }
@@ -3326,21 +3339,22 @@
   }
 
   /* 解决下拉框有filterable属性时问题 */
-  .el-input .el-input__inner {
-    height: var(--input-height-l) !important;
-  }
+  // .el-input .el-input__inner {
+  //   height: var(--input-height-l);
+  // }
 
-  .el-input.el-input--medium .el-input__inner {
-    height: var(--input-height-m) !important;
-  }
+  // .el-input.el-input--medium .el-input__inner {
+  //   height: var(--input-height-m);
+  // }
+  
 
-  .el-input.el-input--small .el-input__inner {
-    height: var(--input-height-s) !important;
-  }
+  // .el-input.el-input--small .el-input__inner {
+  //   height: var(--input-height-s);
+  // }
 
-  .el-input.el-input--mini .el-input__inner {
-    height: var(--input-height-xs) !important;
-  }
+  // .el-input.el-input--mini .el-input__inner {
+  //   height: var(--input-height-xs);
+  // }
 }
 
 .el-select-dropdown {
@@ -3690,13 +3704,14 @@
     }
 
     li:hover {
-      color: var(--pagination-pager-color-hover);
-      background-color: var(--pagination-pager-bg-hover);
+      color: var(--pagination-pager-color-actived);
+      // color: var(--pagination-pager-color-hover);
+      border:1px solid var(--pagination-pager-bg-hover);
     }
 
     li.active {
       color: var(--pagination-pager-color-actived);
-      background-color: var(--pagination-pager-bg-actived);
+      border:1px solid var(--pagination-pager-bg-actived);
     }
   }
 
@@ -4194,9 +4209,9 @@
 .el-divider {
   background-color: var(--divider-bg-color);
 
-  &--horizontal {
-    margin: 0 0 20px;
-  }
+  // &--horizontal {
+  //   margin: 0 0 20px;
+  // }
 }
 
 /* confirm 强提醒弹窗 -- start */
