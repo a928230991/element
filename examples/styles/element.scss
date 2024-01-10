@@ -28,7 +28,6 @@
 
   .el-input__suffix {
     .el-input__suffix-inner {
-      // background-color: var(--color-bg-5);
 
       .el-input__icon {
         line-height: var(--input-height-l);
@@ -339,11 +338,17 @@ top: 6px;
         background-color: var(--checkbox-inner-bg-checked);
       }
     }
-
+    
     &.is-disabled {
       .el-checkbox__inner {
         border-color: var(--checkbox-inner-border-color-disabled);
         background-color: var(--checkbox-inner-bg-disabled);
+      }
+      &.is-checked {
+        .el-checkbox__inner {
+          border-color: var(--checkbox-inner-border-color-disabled);
+          background-color: var(--blue-5-a50);
+        }
       }
     }
 
@@ -365,7 +370,6 @@ top: 6px;
 }
 
 .el-checkbox-group, .el-checkbox {
-  // font-size: unset;
   line-height: var(--input-height-l);
 }
 
@@ -397,8 +401,6 @@ top: 6px;
   }
 
   span.el-checkbox__label {
-  // line-height: inherit;
-  //   vertical-align: bottom;
     font-size: var(--font-size-4);
   }
 }
@@ -486,7 +488,6 @@ top: 6px;
 
 
 .el-radio-group {
-  // font-size: unset;
   vertical-align: inherit;
   line-height: var(--input-height-l);
 }
@@ -2407,17 +2408,6 @@ top: 6px;
   margin-left: 0px;
 }
 
-// .el-button.el-button--medium+.el-button.el-button--medium {
-//   margin-left: var(--idss-margin-small);
-// }
-
-// .el-button.el-button--small+.el-button.el-button--small {
-//   margin-left: var(--idss-margin-small);
-// }
-
-// .el-button.el-button--mini+.el-button.el-button--mini {
-//   margin-left: var(--idss-margin-small);
-// }
 
 /* 筛选器中-快捷时间-第一个button的margin-left未生效 */
 .idss_time_select_quick_box {
@@ -2680,6 +2670,24 @@ top: 6px;
       font-size: 8px;
       vertical-align: top;
     }
+  }
+
+  &.is-round{
+    
+    padding: var(--button-main-l-padding);
+    
+    &.el-button--medium{
+      padding: var(--button-main-m-padding);
+    }
+
+    &.el-button--small{
+      padding: var(--button-main-s-padding);
+    }
+
+    &.el-button--mini{
+      padding: var(--button-main-xs-padding);
+    }
+    
   }
 }
 
@@ -3337,24 +3345,6 @@ top: 6px;
       border-color: var(--button-plain-info-border-color);
     }
   }
-
-  /* 解决下拉框有filterable属性时问题 */
-  // .el-input .el-input__inner {
-  //   height: var(--input-height-l);
-  // }
-
-  // .el-input.el-input--medium .el-input__inner {
-  //   height: var(--input-height-m);
-  // }
-  
-
-  // .el-input.el-input--small .el-input__inner {
-  //   height: var(--input-height-s);
-  // }
-
-  // .el-input.el-input--mini .el-input__inner {
-  //   height: var(--input-height-xs);
-  // }
 }
 
 .el-select-dropdown {
@@ -3699,13 +3689,12 @@ top: 6px;
     li {
       height: var(--pagination-height-small);
       line-height: var(--pagination-height-small);
-      width: 32px;
+      width: var(--pagination-height-small);
       margin: 0 2px;
     }
 
     li:hover {
       color: var(--pagination-pager-color-actived);
-      // color: var(--pagination-pager-color-hover);
       border:1px solid var(--pagination-pager-bg-hover);
     }
 
@@ -3911,7 +3900,7 @@ top: 6px;
         .el-tabs__nav {
           .el-tabs__active-bar {
             height: 2px;
-            background-color: var(--guan-gray-10);
+            background-color: var(--blue-5);
           }
 
           .el-tabs__item {
@@ -3949,9 +3938,6 @@ top: 6px;
 
   &.el-tabs--top,
   &.el-tabs--bottom {
-    .el-tabs__nav-wrap {
-      padding-left: 4px;
-    }
 
     .el-tabs__active-bar:before,
     .el-tabs__active-bar::after {
@@ -4208,10 +4194,6 @@ top: 6px;
 ------------------------------------------------------------------ */
 .el-divider {
   background-color: var(--divider-bg-color);
-
-  // &--horizontal {
-  //   margin: 0 0 20px;
-  // }
 }
 
 /* confirm 强提醒弹窗 -- start */

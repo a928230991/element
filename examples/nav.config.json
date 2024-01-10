@@ -74,6 +74,10 @@
             {
               "path": "/switch",
               "title": "Switch 开关"
+            },
+            {
+              "path": "/upload",
+              "title": "Upload 上传"
             }
           ]
         },

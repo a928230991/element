@@ -3,14 +3,14 @@
 
 ### 基础用法
 
-基础用法
+基础用法，注意1.区分主要按钮和默认按钮，2.次要按钮似乎都一样。
 
 :::demo 你可以使用`disabled`属性来定义按钮是否可用，它接受一个`Boolean`值。
 
 ```html
 <el-row>
   <el-button>默认按钮</el-button>
-  <el-button type="primary">主要按钮</el-button>
+  <el-button type="primary">默认按钮</el-button>
   <el-button type="success">成功按钮</el-button>
   <el-button type="info">信息按钮</el-button>
   <el-button type="warning">警告按钮</el-button>
@@ -20,7 +20,7 @@
 
 <el-row>
   <el-button plain>朴素按钮</el-button>
-  <el-button type="primary" plain>主要按钮</el-button>
+  <el-button type="primary" plain>默认按钮</el-button>
   <el-button type="success" plain>成功按钮</el-button>
   <el-button type="info" plain>信息按钮</el-button>
   <el-button type="warning" plain>警告按钮</el-button>
@@ -28,11 +28,21 @@
   <el-button type="finished" plain>完成按钮</el-button>
 </el-row>
 
+<el-row>
+  <el-button disabled>默认按钮</el-button>
+  <el-button type="primary" disabled>默认按钮</el-button>
+  <el-button type="success" disabled>成功按钮</el-button>
+  <el-button type="info" disabled>信息按钮</el-button>
+  <el-button type="warning" disabled>警告按钮</el-button>
+  <el-button type="danger" disabled>危险按钮</el-button>
+  <el-button type="finished" disabled>完成按钮</el-button>
+</el-row>
+
 
 
 <el-row>
   <el-button round>圆角按钮</el-button>
-  <el-button type="primary" round>主要按钮</el-button>
+  <el-button type="primary" round>默认按钮</el-button>
   <el-button type="success" round>成功按钮</el-button>
   <el-button type="info" round>信息按钮</el-button>
   <el-button type="warning" round>警告按钮</el-button>
@@ -41,9 +51,9 @@
 </el-row>
 
 <el-row>
-  <el-button type="secondary">secondary按钮</el-button>
+  <el-button type="secondary">主要按钮</el-button>
   <el-button type="subprimary">次要按钮</el-button>
-  <el-button type="secondary" round>secondary按钮</el-button>
+  <el-button type="secondary" round>主要按钮</el-button>
   <el-button type="subprimary" round>次要按钮</el-button>
 </el-row>
 ```
@@ -57,8 +67,8 @@
 
 ```html
 <el-row>
-  <el-button narrow>默认按钮</el-button>
-  <el-button type="primary" narrow>主要按钮</el-button>
+  <el-button narrow>次要按钮</el-button>
+  <el-button type="primary" narrow>默认按钮</el-button>
   <el-button type="success" narrow>成功按钮</el-button>
   <el-button type="info" narrow>信息按钮</el-button>
   <el-button type="warning" narrow>警告按钮</el-button>
@@ -67,13 +77,23 @@
 </el-row>
 
 <el-row>
-  <el-button size="medium" narrow>中等按钮</el-button>
-  <el-button size="medium" type="primary" narrow>主要按钮</el-button>
+  <el-button size="medium" narrow>次要按钮</el-button>
+  <el-button size="medium" type="primary" narrow>默认按钮</el-button>
   <el-button size="medium" type="success" narrow>成功按钮</el-button>
   <el-button size="medium" type="info" narrow>信息按钮</el-button>
   <el-button size="medium" type="warning" narrow>警告按钮</el-button>
   <el-button size="medium" type="danger" narrow>危险按钮</el-button>
   <el-button size="medium" type="finished" narrow>完成按钮</el-button>
+</el-row>
+
+<el-row>
+  <el-button narrow disabled>次要按钮</el-button>
+  <el-button type="primary" narrow disabled>默认按钮</el-button>
+  <el-button type="success" narrow disabled>成功按钮</el-button>
+  <el-button type="info" narrow disabled>信息按钮</el-button>
+  <el-button type="warning" narrow disabled>警告按钮</el-button>
+  <el-button type="danger" narrow disabled>危险按钮</el-button>
+  <el-button type="finished" narrow disabled>完成按钮</el-button>
 </el-row>
 ```
 :::

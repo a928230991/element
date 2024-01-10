@@ -90,42 +90,42 @@
     <tr
     :style="{ fontSize: font_size_extra_small }"
     >
-      <td>辅助文字</td>
+      <td>辅助文字、正文、表格内</td>
       <td class="color-dark-light">{{font_size_extra_small}} Extra Small</td>
       <td>用 Element 快速搭建页面</td>
     </tr>
     <tr
     :style="{ fontSize: font_size_small }"
     >
-      <td>正文（小）</td>
+      <td>正文（小）、表单文字</td>
       <td class="color-dark-light">{{font_size_small}} Small</td>
       <td>用 Element 快速搭建页面</td>
     </tr>
     <tr
     :style="{ fontSize: font_size_base }"
     >
-      <td>正文</td>
+      <td>正文、模块标题/tab选中</td>
       <td class="color-dark-light">{{font_size_base}} Base</td>
       <td>用 Element 快速搭建页面</td>
     </tr>
     <tr
     :style="{ fontSize: font_size_medium }"
     >
-      <td>小标题</td>
+      <td>大标题</td>
       <td class="color-dark-light">{{font_size_medium}} Medium</td>
       <td>用 Element 快速搭建页面</td>
     </tr>
     <tr
     :style="{ fontSize: font_size_large }"
     >
-      <td>标题</td>
+      <td>大标题</td>
       <td class="color-dark-light">{{font_size_large}} large</td>
       <td>用 Element 快速搭建页面</td>
     </tr>
     <tr
     :style="{ fontSize: font_size_extra_large }"
     >
-      <td>主标题</td>
+      <td>特大标题</td>
       <td class="color-dark-light">{{font_size_extra_large}} Extra large</td>
       <td>用 Element 快速搭建页面</td>
     </tr>

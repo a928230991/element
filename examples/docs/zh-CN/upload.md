@@ -1,6 +1,6 @@
 ## Upload 上传
 
-通过点击或者拖拽上传文件
+通过点击或者拖拽上传文件,态势使用时，添加class am-upload,拖拽上传时无问题，其他场景不确定。
 
 ### 点击上传
 
@@ -298,15 +298,31 @@
 
 :::demo
 ```html
-<el-upload
-  class="upload-demo"
-  drag
-  action="https://jsonplaceholder.typicode.com/posts/"
-  multiple>
-  <i class="el-icon-upload"></i>
-  <div class="el-upload__text">将文件拖到此处，或<em>点击上传</em></div>
-  <div class="el-upload__tip" slot="tip">只能上传jpg/png文件，且不超过500kb</div>
-</el-upload>
+<el-row>
+  <el-col :span="12">
+    <el-upload
+      class="upload-demo"
+      drag
+      action="https://jsonplaceholder.typicode.com/posts/"
+      multiple>
+      <i class="el-icon-upload"></i>
+      <div class="el-upload__text">将文件拖到此处，或<em>点击上传</em></div>
+      <div class="el-upload__tip" slot="tip">只能上传jpg/png文件，且不超过500kb</div>
+    </el-upload>
+  </el-col>
+  <el-col :span="12">
+    <el-upload
+      class="upload-demo am-upload"
+      drag
+      action="https://jsonplaceholder.typicode.com/posts/"
+      multiple>
+      <i class="el-icon-upload"></i>
+      <div class="el-upload__text">将文件拖到此处，或<em>点击上传</em></div>
+      <div class="el-upload__tip" slot="tip">只能上传jpg/png文件，且不超过500kb</div>
+    </el-upload>
+  </el-col>
+</el-row>
+
 ```
 :::
 

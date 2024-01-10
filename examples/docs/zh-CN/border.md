@@ -4,14 +4,18 @@
   const varMap = {
     '$--box-shadow-light': 'boxShadowLight',
     '$--box-shadow-base': 'boxShadowBase',
+    '$--box-shadow-second': 'boxShadowSecond',
+    '$--box-shadow-third': 'boxShadowThird',
     '$--border-radius-base': 'borderRadiusBase',
     '$--border-radius-small': 'borderRadiusSmall'
   };
   const original = {
     boxShadowLight: '0 2px 12px 0 rgba(0, 0, 0, 0.1)',
-    boxShadowBase: '0 2px 4px rgba(0, 0, 0, .12), 0 0 6px rgba(0, 0, 0, .04)',
-    borderRadiusBase: '4px',
-    borderRadiusSmall: '2px'
+    boxShadowBase: '0 0 16px 0 var(--guan-gray-7-a20)',
+    boxShadowSecond:'0 0 16px 0 var(--guan-gray-7-a30)',
+    boxShadowThird:'0 0 16px 0 var(--guan-gray-7-a40)',
+    borderRadiusBase: 'var(--corner-m)',
+    borderRadiusSmall: 'var(--corner-default)'
   }
   export default {
     created() {
@@ -56,6 +60,7 @@
 ## Border 边框
 
 我们对边框进行统一规范，可用于按钮、卡片、弹窗等组件里。
+边角是用一段与角的两边相切的圆弧替换原来的角，在界面设计中，适当的边角不仅可以反应产品的调性，还提供更友好的视觉体验。在组件中，使用了两种边角数值，如：小号组件使用“边角-1”，大号组件使用“边角-2”。
 
 ### 边框
 
@@ -96,7 +101,7 @@
     <div class="radius"></div>
   </el-col>
   <el-col :span="6" :xs="{span: 12}">
-    <div class="title">小圆角</div>
+    <div class="title">小圆角2px</div>
     <div class="value">border-radius: {{borderRadiusSmall}}</div>
     <div 
       class="radius" 
@@ -104,7 +109,7 @@
     ></div>
   </el-col>
   <el-col :span="6" :xs="{span: 12}">
-    <div class="title">大圆角</div>
+    <div class="title">大圆角4px</div>
     <div class="value">border-radius: {{borderRadiusBase}}</div>
     <div 
       class="radius"
@@ -127,6 +132,18 @@ class="demo-shadow"
 :style="{ boxShadow: boxShadowBase }"
 ></div>
 <span class="demo-shadow-text">基础投影 box-shadow: {{boxShadowBase}}</span>
+
+<div 
+class="demo-shadow"
+:style="{ boxShadow: boxShadowSecond }"
+></div>
+<span class="demo-shadow-text">二级投影 box-shadow: {{boxShadowSecond}}</span>
+
+<div 
+class="demo-shadow"
+:style="{ boxShadow: boxShadowThird }"
+></div>
+<span class="demo-shadow-text">三级投影 box-shadow: {{boxShadowThird}}</span>
 
 <div 
 class="demo-shadow"
